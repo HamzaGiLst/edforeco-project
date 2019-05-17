@@ -14,7 +14,19 @@ class CreateAnnoncesTable extends Migration
     public function up()
     {
         Schema::create('annonces', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->bigIncrements('annonceid');
+            $table->string('job');
+            $table->string('entreprise');
+            $table->string('localization');
+            $table->string('email');
+            $table->string('type_contrat');
+            $table->float('startsalary');
+            $table->float('endsalary');
+            $table->string('per_temp');
+            $table->text('describe_entreprise');
+            $table->text('describe_poste');
+            $table->text('profil_recherche');
+            $table->integer('dure_poste');
             $table->timestamps();
         });
     }

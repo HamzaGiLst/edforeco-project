@@ -8,4 +8,5 @@ class Formation extends Model
 {
     //
     protected $primaryKey = 'formationid';
+
 }

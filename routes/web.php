@@ -1,5 +1,9 @@
 <?php
+
+use App\Formation;
 use Illuminate\Support\Facades\DB ;
+//use Illuminate\Routing\Route;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,6 +23,48 @@ Route::get('/read',function (){
     $data = DB::select('select * from users where id = ?' ,['2']);
    return $data ;
 });
-Route::get('/formation',function (){
-    return view('formations.submit_formation');
+
+
+
+#----------------------------------------------------------------#
+#                   FORMATION AND EDUCATION ROUTE                #
+#----------------------------------------------------------------#
+Route::get('/formation','edu\FormationController@index');
+Route::post('/submit','edu\FormationController@submit');
+Route::get('/f','edu\FormationController@list_demande');
+
+
+
+
+
+
+#----------------------------------------------------------------#
+#                   COACHING ROUTE                               #
+#----------------------------------------------------------------#
+Route::get('/coaching','coach\CoachingController@index');
+Route::post('/store','coach\CoachingController@open_case');
+
+
+
+
+
+#----------------------------------------------------------------#
+#                   RECRUTENET EMPLOI ROUTE                      #
+#----------------------------------------------------------------#
+Route::get('/r',function (){
+   return view('recrute.index');
 });
+
+Route::get('/p',function (){
+    return view('recrute.entreprise.post');
+});
+
+Route::post('/postannonce','rec\RecrutemetController@post_annoce');
+
+#----------------------------------------------------------------#
+#                   ADMIN ROUTEVVVVVVVVVV -                      #
+#----------------------------------------------------------------#
+Route::get('/admin','AdminController@coach');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
