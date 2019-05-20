@@ -51,20 +51,22 @@ Route::post('/store','coach\CoachingController@open_case');
 #----------------------------------------------------------------#
 #                   RECRUTENET EMPLOI ROUTE                      #
 #----------------------------------------------------------------#
-Route::get('/r',function (){
-   return view('recrute.index');
-});
+Route::get('/r','rec\RecrutemetController@offre');
 
-Route::get('/p',function (){
-    return view('recrute.entreprise.post');
-});
+Route::get('/p','rec\RecrutemetController@post_page');
 
 Route::post('/postannonce','rec\RecrutemetController@post_annoce');
 
+Route::get('/job','rec\RecrutemetController@postuler');
+//mail demande emploi
+Route::get('/sendDemandeJob','rec\RecrutemetController@sendDemendEmploi');
 #----------------------------------------------------------------#
-#                   ADMIN ROUTEVVVVVVVVVV -                      #
+#                   ADMIN ROUTE           -                      #
 #----------------------------------------------------------------#
-Route::get('/admin','AdminController@coach');
+Route::get('/admin','AdminController@traiter_formation');
+
+
+//################################################################
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

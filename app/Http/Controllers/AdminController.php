@@ -14,7 +14,7 @@ class AdminController extends Controller
      */
     protected function traiter_formation(){
         $edu = Formation::all();
-        return view('admin.edu',compact('edu'));
+        return view('admin.dashboard',compact('edu'));
     }
     protected function traite_coaching(){
         $coach = Coaching::all();
