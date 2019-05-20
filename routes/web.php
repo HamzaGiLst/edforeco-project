@@ -49,7 +49,7 @@ Route::post('/store','coach\CoachingController@open_case');
 
 
 #----------------------------------------------------------------#
-#                   RECRUTENET EMPLOI ROUTE                      #
+#                   RECRUTENET EMPLOIr ROUTE                      #
 #----------------------------------------------------------------#
 Route::get('/r','rec\RecrutemetController@offre');
 
