@@ -26,7 +26,6 @@ class CreateAnnoncesTable extends Migration
             $table->text('describe_entreprise');
             $table->text('describe_poste');
             $table->text('profil_recherche');
-            $table->integer('dure_poste');
             $table->timestamps();
         });
     }

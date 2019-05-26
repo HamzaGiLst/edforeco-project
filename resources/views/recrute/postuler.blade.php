@@ -50,14 +50,14 @@
                         <input type="submit" value="Postuler" >
                     </form>
                     <form action="" class="applyForm2">
-                        <input type="submit" value="Save jobs" >
+                        <input type="submit" value="Save jobs" class="btn-outline" >
                     </form>
                 </div>
             </div>
         </div>
     </div>
     <div class="jobDetails">
-        {{$_job->describe_poste}}
+        <?php $_job->describe_poste ?>
     </div>
 
 @endsection

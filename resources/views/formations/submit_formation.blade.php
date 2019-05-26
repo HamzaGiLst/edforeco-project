@@ -22,6 +22,15 @@
 @endsection
 @section('content')
     <div class="container">
+        @if(count($errors)>0)
+            <div class="alert alert-danger" role="alert">
+                @foreach($errors->all() as $er)
+                    {{$er}}
+                    <hr>
+                @endforeach
+
+            </div>
+        @endif
         <div class="col-md-6">
             <form method="post" action="/submit" >
                 {{ csrf_field() }}
@@ -35,12 +44,12 @@
                     <input type="text" class="form-control" name="phone" id="tel" placeholder=" ">
                 </div>
                 <label for="formation">formation</label><select name="choix_formation" id="formation" class="form-control">
-                    <option value="">Choisir Formation</option>
-                    <option value="">medcine</option>
-                    <option value="">top</option>
-                    <option value="">gb</option>
-                    <option value="">informatique</option>
-                    <option value="">express votre besoin</option>
+                    <option >Choisir Formation</option>
+                    <option >medcine</option>
+                    <option >top</option>
+                    <option >gb</option>
+                    <option >informatique</option>
+                    <option >express votre besoin</option>
 
                 </select>
                 <div class="form-group row" id='bb'><label for="b">besoin</label>
@@ -53,6 +62,7 @@
 
             </form>
         </div>
+
     </div>
     
 @endsection

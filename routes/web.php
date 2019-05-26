@@ -2,7 +2,6 @@
 
 use App\Formation;
 use Illuminate\Support\Facades\DB ;
-//use Illuminate\Routing\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,9 +13,28 @@ use Illuminate\Support\Facades\DB ;
 | contains the "web" middleware group. Now create something great!
 |
 */
+///test
+Route::get('/cond', function () {
+    return view('profiles.condidat.login');
+});
+///Route::get('/regi', function () {
+//    return view('profiles.condidat.register');
+//});
+//Route::get('/condidat/register','rec\ProfilesController@index');
+//Route::post('/condidat/create','rec\ProfilesController@store');
+Route::resource('condidats','rec\ProfilesController');
+Route::get('condidats/login','rec\ProfilesController@login_index');
 
+Route::resource('company','rec\ProfilecompanyController');
+
+
+//////
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::get('/site', function () {
+    return view('mainapp');
 });
 
 Route::get('/read',function (){
@@ -29,9 +47,14 @@ Route::get('/read',function (){
 #----------------------------------------------------------------#
 #                   FORMATION AND EDUCATION ROUTE                #
 #----------------------------------------------------------------#
-Route::get('/formation','edu\FormationController@index');
-Route::post('/submit','edu\FormationController@submit');
-Route::get('/f','edu\FormationController@list_demande');
+Route::group(['middleware'=>'web'],function (){
+    Route::get('/formation','edu\FormationController@index');
+    Route::post('/submit','edu\FormationController@submit');
+    Route::post('/s','edu\FormationController@store');
+    Route::get('/f','edu\FormationController@list_demande');
+});
+
+Route::resource('/education','edu\FormationController');
 
 
 
@@ -49,21 +72,26 @@ Route::post('/store','coach\CoachingController@open_case');
 
 
 #----------------------------------------------------------------#
-#                   RECRUTENET EMPLOIr ROUTE                      #
+#                   RECRUTENET EMPLOIr ROUTE                     #
 #----------------------------------------------------------------#
-Route::get('/r','rec\RecrutemetController@offre');
-
 Route::get('/p','rec\RecrutemetController@post_page');
 
 Route::post('/postannonce','rec\RecrutemetController@post_annoce');
 
-Route::get('/job','rec\RecrutemetController@postuler');
+#find jobs
+Route::get('/rhome','rec\RecrutemetController@searchoffre');
+
+Route::get('/job/{id}','rec\RecrutemetController@postuler');
+
+Route::get('/jobs','rec\RecrutemetController@showJobs');
+
 //mail demande emploi
 Route::get('/sendDemandeJob','rec\RecrutemetController@sendDemendEmploi');
 #----------------------------------------------------------------#
 #                   ADMIN ROUTE           -                      #
 #----------------------------------------------------------------#
 Route::get('/admin','AdminController@traiter_formation');
+
 
 
 //################################################################

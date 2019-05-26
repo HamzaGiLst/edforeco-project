@@ -5,6 +5,7 @@ namespace App\Http\Controllers\edu;
 
 use App\Formation;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\FormationRequest;
 use Illuminate\Support\Facades\Validator;
 
 use Illuminate\Http\Request;
@@ -35,16 +36,27 @@ class FormationController extends Controller
     /**
      * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
      */
-    protected function submit(){
-        $formation = new Formation;
-        $formation->entreprise=request('entreprise');
-        $formation->email=request('email');
-        $formation->phone=request('phone');
-        $formation->formation=request('choix_formation');
-        $formation->besoin=request('besoinf');
-        $formation->note=request('sms');
-        $formation->save();
+    protected function submit(FormationRequest $request){
+       // Formation::create($request->all());
+        if (!$request->besoinf){
+            $request->besoinf='new assignment';
+        }
+
+               $formation = new Formation;
+               $formation->entreprise =  $request->entreprise;
+               $formation->email=request('email');
+               $formation->phone=request('phone');
+               $formation->formation=request('choix_formation');
+                //$formation->formation=$_POST['choix_formation'];
+               $formation->besoin=$request->besoinf;
+               $formation->note=request('sms');
+               $formation->save();
          return redirect('/formation');
+    }
+
+    protected function store(Request $requist){
+        Formation::create($requist->all());
+        return 'good';
     }
 
     /**

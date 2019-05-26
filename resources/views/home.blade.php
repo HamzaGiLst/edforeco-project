@@ -17,7 +17,13 @@
                     You are logged in!
                 </div>
             </div>
+
         </div>
+
     </div>
+
 </div>
+<form action={{route('logout')}} method="post">
+    <button class="btn btn-danger">logout</button>
+</form>
 @endsection

@@ -2,10 +2,24 @@
 @section('title','got tot it itn')
 @section('header')
     <style>
-        .search{
-            padding: 1rem;
-            margin-left: 21rem;
+        .search-job2 {
+            float: left;
+            width: 100%;
+            background: rgba(24, 74, 255, 0.81);
+            -webkit-border-radius: 60px;
+            -moz-border-radius: 60px;
+            -ms-border-radius: 60px;
+            -o-border-radius: 60px;
+            border-radius: 60px;
+            margin-top: 50px;
+            padding: 9px;
             position: relative;
+            top: 0rem;
+
+        }
+        .search-job2 input {
+            position: relative;
+            left: 10rem;
         }
         .sh {
             width: 330px;
@@ -28,6 +42,9 @@
         }
         .navbar-custom{
             background: rgba(69, 69, 69, 0.15);
+        }
+        #navbar-custom{
+            background: #000;
         }
     </style>
 @endsection
@@ -60,10 +77,6 @@
                 </li>
 
             </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">find job</button>
-            </form>
         </div>
     </nav>
 @endsection
@@ -71,8 +84,8 @@
 
     <div class="card" style="">
         <div class="card-body" id="Search-card">
-            <div class="search">
-                <form action="" method="get" class="form-inline">
+            <div class="search-job2">
+                <form action="/jobs" method="get" class="form-inline">
                                 <span>
                                     <input type="text" name="key" id="key" placeholder="poste ou entreprise" class="form-control">
                                     <input type="text" name="where" class="form-control">
@@ -101,9 +114,9 @@
         </div>
 
     <div class="container">
-        <div class="row justify-content-center">
+        <div class="row justify-content-lg-start"><!--- justify-content-center-->
             <div class="col-md-8">
-                <div class="" style="position:relative;top: -660px;text-shadow: 0 0 black;">
+                <div class="" style="text-shadow: 0 0 black; width:50rem;">
                     <!--           <div class="card-header">Dashboard</div>-->
 
                     <div class="card-body">
@@ -119,13 +132,13 @@
                                         </div>
                                         <div class="summary">
                                             <span>
-                                                le salaire commence par {{$post['startsalary']}} DH <strong CLASS="btn bg-transparent">info</strong>{{$post['describe_poste']}}
+                                                le salaire commence par {{$post['startsalary']}} DH <strong CLASS="btn bg-transparent">info</strong><?php echo $post['describe_poste'] ?>
 
                                             </span>
                                         </div>
                                         <div class="footer">
                                             {{$post['entreprise']}}-{{$post['created_at']}}
-                                            <a href="job?id={{$post['annonceid']}}">more</a>
+                                            <a href="job/{{$post['annonceid']}}">more</a>
                                         </div>
                                     </div>
                                     <hr>

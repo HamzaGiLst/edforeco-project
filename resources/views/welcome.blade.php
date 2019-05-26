@@ -80,11 +80,7 @@
             @endif
 
             <div class="content">
-                <div class="title m-b-md">
-
-                </div>
-
-                <div class="links">
+                @include('inc.hnav')
 
                 </div>
             </div>
