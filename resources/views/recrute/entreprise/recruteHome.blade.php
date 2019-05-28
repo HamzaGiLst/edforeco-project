@@ -1,39 +1,89 @@
 @extends('layouts.app')
 @section('title','chercher vous dreams')
 @section('header')
+    <link rel="stylesheet" href="js/main.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
     <style>
+        .navbar-expand {
+            position: absolute;
+        }
+        .navbar-expand li {
+            font-size: 18px;
+        }
 
-        .navbar {
-            margin-bottom: 20px;
+        .N {
+            font-size: 53px;
+            color: #00ad5f;
         }
-        .search-job2 {
-            float: left;
-            width: 100%;
-            background: rgba(24, 74, 255, 0.81);
-            -webkit-border-radius: 60px;
-            -moz-border-radius: 60px;
-            -ms-border-radius: 60px;
-            -o-border-radius: 60px;
-            border-radius: 60px;
-            margin-top: 50px;
-            padding: 9px;
+        #side{
+            margin-left: 32rem;
+        }
+        #s2 ,#s3 {
+            margin-left: 2rem;
+        }
+        .foo{
+            background:darkslategrey;
+        }
+        .s130 form{
+            padding-top: 30vh;
             position: relative;
-            top: 10rem;
+            top: 11rem;
         }
-        navbar-custom{
-            background: #1b4b72;
-            color: #1b4b72;
+        .btn1 {
+            display: inline-block;
+            font-weight: 400;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            border: 1px solid transparent;
+            padding: .375rem .75rem;
+            font-size: 16px;
+            line-height: 1.5;
+            border-radius: .25rem;
+            transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
         }
-        .search-job2 input {
-            position: relative;
-            left: 10rem;
+        .btn-outline-primary1 {
+            color: #007bff;
+            background-color: transparent;
+            background-image: none;
+            border-color: rgba(255, 255, 255, 0.98);
         }
+        .btn-outline-primary1:hover{
+            color: #FFFFFF;
+            background: #007bff;
+        }
+        .btn-outline-danger1 {
+            color: #dc3545;
+            background-color: transparent;
+            background-image: none;
+            border-color: rgba(255, 255, 255, 0.98);
+        }
+        .btn-outline-danger1:hover{
+            color: #FFFFFF;
+            background: #dc3545;
+        }
+        .btn-outline-success1 {
+            color: #28a745;
+            background-color: transparent;
+            background-image: none;
+            border-color: rgba(255, 255, 255, 0.98);
+        }
+        .btn-outline-success1:hover{
+            color:#FFFFFF;
+            background: #28a745;
+        }
+
     </style>
 
 @endsection
 @section('navbar')
-    <nav class="navbar navbar-dark bg-dark">
-        <a class="navbar-brand" href="/rhome">EDFORECO</a>
+    <nav class="navbar-expand navbar-dark">
+        <a class="navbar-brand" href="/rhome"><img src="img/logo.png" alt="" width="117px"></a>
         <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -41,22 +91,32 @@
         <div class="navbar-collapse collapse" id="navbarsExample01" style="">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="/site" style="color: #1b0100;background: #ffffffd6;">Accueil <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">OFFRES</a>
+                    <a class="nav-link" href="/rhome" style="color: #1b0100;background: #ffffffd6;">Offres</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Entreprise</a>
+                    <a class="nav-link" href="/company" style="color: #1b0100;background: #ffffffd6;">Entreprise</a>
                 </li>
                 <li class="nav-item dropdown dropdown-menu-right">
-                    <a class="nav-link dropdown-toggle" href="" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                    <a  style="color: #1b0100;background: #ffffffd6;" class="nav-link dropdown-toggle" href="" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
                     <div class="dropdown-menu" aria-labelledby="dropdown01">
                         <a class="dropdown-item" href="#">Action</a>
                         <a class="dropdown-item" href="#">Another action</a>
                         <a class="dropdown-item" href="#">Something else here</a>
                     </div>
                 </li>
+                    <li class="nav-item" id="side">
+                        <a class="nav-link" href="/login"><button class="btn1 btn-pill btn-outline-success1">Conecter</button></a>
+                    </li>
+                    <li class="nav-item" id="s2">
+                        <a class="nav-link" href="/condidats"><button class="btn1 btn-outline-danger1">S'inscrire</button></a>
+                    </li>
+                    <li class="nav-item" id="s3">
+                        <a class="nav-link " href="/login"><button class="btn1 btn-outline-primary1">Espace Recruteur</button></a>
+                    </li>
+
             </ul>
         </div>
     </nav>
@@ -64,71 +124,53 @@
 @endsection
 @section('content')
 
-
-
-
-
-    <div class="card" style="height: 30rem;background: #1b4b72;background-image:url('img/emploi.jpg');background-size: auto 50rem ;">
-        <div class="card-body">
-            <div class="search-job2">
-                <form action="/jobs" method="get" class="form-inline">
-                                <span>
-                                    <input type="text" name="key" id="key" placeholder="poste ou entreprise" class="form-control-lg">
-                                    <input type="text" name="where" class="form-control-lg">
-                                    <input type="submit" value="find job" class="btn btn-success btn-ladda-progress" data-style="expand-right">
-                                </span>
-                </form>
-            </div>
-        </div>
-        <div class="card" style="position: relative;top:50rem;background: #1b4b72 ">
-            <div class="card-body">
-                <footer class="container py-5">
-                    <div class="row">
-                        <div class="col-12 col-md">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="d-block mb-2"><circle cx="12" cy="12" r="10"></circle><line x1="14.31" y1="8" x2="20.05" y2="17.94"></line><line x1="9.69" y1="8" x2="21.17" y2="8"></line><line x1="7.38" y1="12" x2="13.12" y2="2.06"></line><line x1="9.69" y1="16" x2="3.95" y2="6.06"></line><line x1="14.31" y1="16" x2="2.83" y2="16"></line><line x1="16.62" y1="12" x2="10.88" y2="21.94"></line></svg>
-                            <small class="d-block mb-3 text-muted">© 2017-2018</small>
-                        </div>
-                        <div class="col-6 col-md">
-                            <h5>Coordonne</h5>
-                            <ul class="list-unstyled text-small">
-                                <li><a class="text-muted" href="#">Cool stuff</a></li>
-                                <li><a class="text-muted" href="#">Random feature</a></li>
-                                <li><a class="text-muted" href="#">Team feature</a></li>
-                                <li><a class="text-muted" href="#">Stuff for developers</a></li>
-                                <li><a class="text-muted" href="#">Another one</a></li>
-                                <li><a class="text-muted" href="#">Last time</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-6 col-md">
-                            <h5>SERVICE</h5>
-                            <ul class="list-unstyled text-small">
-                                <li><a class="text-muted" href="#">Formation et education</a></li>
-                                <li><a class="text-muted" href="#">Coaching</a></li>
-                                </ul>
-                        </div>
-                        <div class="col-6 col-md">
-                            <h5>RECRUTEMENT ET EMPLOIE</h5>
-                            <ul class="list-unstyled text-small">
-                                <li><a class="text-muted" href="#">Notre Offres</a></li>
-                                <li><a class="text-muted" href="#">Poster Annonce</a></li>
-                                <li><a class="text-muted" href="#">Government</a></li>
-                                <li><a class="text-muted" href="#"></a></li>
-                            </ul>
-                        </div>
-                        <div class="col-6 col-md">
-                            <h5>Newsletter</h5>
-                            <ul class="list-unstyled text-small">
-                                <form action="" style="">
-                                    <input type="email" class="form-control">
-                                    <input type="submit" value="Envoyer" class="btn btn-primary">
-                                </form>
-                            </ul>
-                        </div>
+    <div class="s130" style="background-image: url('img/emploi.jpg')">
+        <form action="/jobs" method="get">
+            <div class="inner-form">
+                <div class="input-field first-wrap">
+                    <div class="svg-wrapper">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
+                        </svg>
                     </div>
-                </footer>
+                    <input name="key" id="search" type="text" placeholder="poste enterprise keyword" />
+                    <input name="where" id="search" type="text" placeholder="localisation" />
+                </div>
+                <div class="input-field second-wrap">
+                    <input type="submit" class="btn-search" value="FIND JOB">
+                </div>
+            </div>
+            <span class="info"></span>
+        </form>
+    </div>
+    <div class="card">
+        <div class="card-head" >
+            <div class="text-center">
+                <h1>Nos derniers chiffres</h1>
+        </div>
+        <div class="card-body">
 
+            <div class="custom-chiffre">
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 text-center" >
+                    <div class="N" >{{$offre}}</div>
+                    <h5>Offres en ligne</h5>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 text-center ">
+                    <div class="N" >{{$recruteur}}</div>
+                    <h5>Recruteurs actifs</h5>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 text-center ">
+                    <div class="N" >{{$chercheur}}</div>
+                    <h5>Chercheur D'emploie</h5>
+                </div>
             </div>
         </div>
     </div>
 
+
+
+
+@include('inc.foot')
+
+    <script src="js/choices.js"></script>
 @endsection

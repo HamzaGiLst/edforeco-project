@@ -3,8 +3,11 @@
 namespace App\Http\Controllers\rec;
 
 use App\Annonce;
+use App\Condidat;
+use App\Enterprise;
 use App\Http\Requests\AnnonceRequest;
 use App\Mail\demandJob;
+use Illuminate\Http\Request;
 use Illuminate\Httprequest;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Mail;
@@ -30,15 +33,22 @@ class RecrutemetController extends Controller
         return redirect('/p');
     }
     ////show job offres with conditions
-    protected function showJobs(){
+    protected function showJobs(Request $request){
         $key=request('key');
         $where=request('where');
-        $posts = Annonce::where('job','like','%'.$key.'%')->orWhere('entreprise','like','%'.$key.'%')
-            ->where('localization','like','%'.$where.'%')
-            ->paginate(4)
-            ;
+        if ($request->has('key')){
+            if ($request->has('where')){
+                $posts = Annonce::where('job','like','%'.$key.'%')->orWhere('entreprise','like','%'.$key.'%')
+                    ->where('localization','like','%'.$where.'%')
+                    ->paginate(4)
+                ;
+                return view('recrute.index',compact('posts'));
+            }
+        }
 
-        return view('recrute.index',compact('posts'));
+
+
+
     }
 #tout les offres
     protected function offre(){
@@ -59,7 +69,10 @@ class RecrutemetController extends Controller
 
     #recrutement home
     protected function searchoffre(){
-        return view('recrute.entreprise.recruteHome');
+        $offre=Annonce::all()->count();
+        $recruteur=Enterprise::all()->count();
+        $chercheur=Condidat::all()->count();
+        return view('recrute.entreprise.recruteHome',compact('offre','recruteur','chercheur'));
     }
 
 

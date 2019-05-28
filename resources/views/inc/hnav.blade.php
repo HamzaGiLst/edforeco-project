@@ -1,5 +1,5 @@
-<nav class="navbar navbar-expand-xl bg-dark" style="color: #FFFFFF">
-    <a class="navbar-brand" href="#"><E>dforeco</E></a>
+<nav class="navbar navbar-expand-xl bg-dark custom-nav" style="margin-bottom: 0px;">
+    <a class="navbar-brand" href="#"><E><img src="img/logo.png" width="45px" alt=""></E></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>

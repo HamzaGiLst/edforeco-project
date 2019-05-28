@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="card">
-        <h2>welcome {{$condidat->nom}} to your profile user</h2>
+        <h2>welcome {{$condidat->cv}} to your profile user</h2>
         <div class="card-body">
 
         </div>

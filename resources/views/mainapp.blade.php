@@ -3,6 +3,7 @@
 @section('title','main hub')
 
 @section('header')
+    <link rel="stylesheet" href="css/custom.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -35,9 +36,13 @@
             min-width: 100%;
             height: 35rem;
         }
+        .navbar{
+            border-radius: 0px;
+        }
     </style>
 @endsection
 @section('content')
+    @include('inc.header')
     @include('inc.hnav')
     @include('inc.slider')
     <div class="card">
@@ -49,5 +54,5 @@
         </div>
     </div>
 
-    @include('inc.footer')
+    @include('inc.foot')
 @endsection

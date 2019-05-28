@@ -18,7 +18,7 @@
                     <div class="card-body p-0">
                         <!-- Nested Row within Card Body -->
                         <div class="row">
-                            <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
+                            <div class="col-lg-6 d-none d-lg-block bg-login-image" style="background-image: url('https://images.pexels.com/photos/924633/pexels-photo-924633.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');background-size: 476px auto;"></div>
                             <div class="col-lg-6">
                                 <div class="p-5">
                                     <div class="text-center">
@@ -30,7 +30,7 @@
                                             <input type="text" name="nom" class="form-control form-control-user" id="" aria-describedby="le nom d'entreprise" placeholder="nom d'entreprise">
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" name="site" class="form-control form-control-user" id="" aria-describedby="" placeholder="site web">
+                                            <input type="text" name="site" class="form-control form-control-user" id="" aria-describedby="" placeholder="http://www.yourcompany.com">
                                         </div>
                                         <div class="form-group">
                                             <input type="text" name="addresse" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="" placeholder="Addresse">

@@ -1,7 +1,36 @@
 @extends('layouts.app')
 @section('title','got tot it itn')
 @section('header')
+    <link rel="stylesheet" href="js/main.css">
+    <link rel="stylesheet" href="css/custom.css">
     <style>
+        .pagination {
+            display: inline-block;
+            padding-left: 0;
+            margin: 20px 0;
+            border-radius: 4px;
+            margin-left: 16rem;
+        }
+        .navbar{
+            margin-bottom: 0rem;
+        }
+        .s130 form {
+            width: 100%;
+            max-width: 790px;
+            padding-top: 0vh;
+        }
+        .s130 {
+             min-height: 0vh;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-pack: center;
+            justify-content: center;
+            font-family: 'Poppins', sans-serif;
+            background-position: bottom right;
+            background-repeat: no-repeat;
+            /* background-size: 100%; */
+            padding: 10px;
+        }
         .search-job2 {
             float: left;
             width: 100%;
@@ -50,53 +79,61 @@
 @endsection
 
 @section('navbar')
-    <nav class="navbar navbar-expand-lg navbar-light navbar-custom">
-        <a class="navbar-brand" href="#">EDFORECO</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-expand navbar-dark bg-dark">
+        <a class="navbar-brand" href="/rhome">EDFORECO</a>
+        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-collapse collapse" id="navbarsExample01" style="">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Offres<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/p">entreprise</a>
+                    <a class="nav-link" href="#">OFFRES</a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Services
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Formation et education</a>
-                        <a class="dropdown-item" href="#">Coaching</a>
-                        <div class="dropdown-divider"></div>
-
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Entreprise</a>
+                </li>
+                <li class="nav-item dropdown dropdown-menu-right">
+                    <a class="nav-link dropdown-toggle" href="" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">services</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown01">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
                     </div>
                 </li>
-
             </ul>
         </div>
     </nav>
+
 @endsection
 @section('content')
 
-    <div class="card" style="">
-        <div class="card-body" id="Search-card">
-            <div class="search-job2">
-                <form action="/jobs" method="get" class="form-inline">
-                                <span>
-                                    <input type="text" name="key" id="key" placeholder="poste ou entreprise" class="form-control">
-                                    <input type="text" name="where" class="form-control">
-                                    <input type="submit" value="find job" class="btn btn-outline-primary">
-                                </span>
-                </form>
-            </div>
+    <div class="card" style="height: 10rem">
+
+        <div class="s130" style="">
+            <form action="/jobs" method="get">
+                <div class="inner-form">
+                    <div class="input-field first-wrap">
+                        <div class="svg-wrapper">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
+                            </svg>
+                        </div>
+                        <input name="key" id="search" type="text" placeholder="poste enterprise keyword" />
+                        <input name="where" id="search" type="text" placeholder="localisation" />
+                    </div>
+                    <div class="input-field second-wrap">
+                        <input type="submit" class="btn-search" value="FIND JOB">
+                    </div>
+                </div>
+                <span class="info"></span>
+            </form>
         </div>
     </div>
-    <div class="">
-        <div class="col-md-4">
+        <div class="col-md-3">
             <div class="sh">
                 <div class="card-head">
                     <h1>filter</h1>
@@ -113,13 +150,11 @@
             </div>
         </div>
 
-    <div class="container">
-        <div class="row justify-content-lg-start"><!--- justify-content-center-->
-            <div class="col-md-8">
-                <div class="" style="text-shadow: 0 0 black; width:50rem;">
+        <!--- justify-content-center-->
+            <div class="col-md-9">
                     <!--           <div class="card-header">Dashboard</div>-->
 
-                    <div class="card-body">
+
                         @foreach($posts as $post)
                             <div class="card">
                                 <div class="card-body">
@@ -145,16 +180,37 @@
                                 </div>
                             </div>
                         @endforeach
-                        </div>
-                    </div>
-                    <div class="pagination justify-content-center">
-                        {{$posts->links()}}
-                    </div>
-                </div>
+            </div>
+    <div class="footer">
+        <div class="">
+            <div class="pagination" style="position: relative;left: 20rem">
+                {{$posts->links()}}
             </div>
         </div>
     </div>
-    <div class="footer">
+    <section id="footer">
+        <div class="container">
+             <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
+                    <ul class="list-unstyled list-inline social text-center">
+                        <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-facebook"></i></a></li>
+                        <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-twitter"></i></a></li>
+                        <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-instagram"></i></a></li>
+                        <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-google-plus"></i></a></li>
+                        <li class="list-inline-item"><a href="javascript:void();" target="_blank"><i class="fa fa-envelope"></i></a></li>
+                    </ul>
+                </div>
+                </hr>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
+                    <p><u><a href=""></a></u> </p>
+                    <p class="h6">&copy All right Reversed.<a class="text-green ml-2" href="" target="_blank">EDFORECO</a></p>
+                </div>
+                </hr>
+            </div>
+        </div>
+    </section>
 
-    </div>
+    <script src="js/choices.js"></script>
 @endsection

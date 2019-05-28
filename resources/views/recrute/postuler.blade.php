@@ -2,6 +2,7 @@
 
 @section('title','Job Details')
 @section('header')
+    <link rel="stylesheet" href="../css/app.css">
     <style>
         .applyForm{
             position: relative;
@@ -57,7 +58,28 @@
         </div>
     </div>
     <div class="jobDetails">
-        <?php $_job->describe_poste ?>
+
+    </div>
+    <div class="card" style="background: rgba(33,153,167,0.13)">
+        <div class="row">
+            <h1>Entreprise</h1>
+            <div class="content">
+                <?php echo $_job->describe_entreprise ?>
+            </div>
+        </div>
+        <div class="row">
+            <h1>Poste</h1>
+            <div class="content">
+                <?php echo $_job->describe_poste ?>
+
+            </div>
+        </div>
+        <div class="row">
+            <h1>Profile recherche</h1>
+            <div class="content">
+                {{$_job->job}}
+            </div>
+        </div>
     </div>
 
 @endsection

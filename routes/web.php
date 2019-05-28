@@ -23,7 +23,7 @@ Route::get('/cond', function () {
 //Route::get('/condidat/register','rec\ProfilesController@index');
 //Route::post('/condidat/create','rec\ProfilesController@store');
 Route::resource('condidats','rec\ProfilesController');
-Route::get('condidats/login','rec\ProfilesController@login_index');
+Route::get('condidat/login','rec\ProfilesController@login_index');
 
 Route::resource('company','rec\ProfilecompanyController');
 
