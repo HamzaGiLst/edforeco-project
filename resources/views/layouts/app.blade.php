@@ -23,6 +23,6 @@
 
     @yield('sidbar')
 </div>
-
+@yield('footer')
 </body>
 </html>
