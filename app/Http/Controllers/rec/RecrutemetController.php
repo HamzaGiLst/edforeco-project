@@ -69,7 +69,7 @@ class RecrutemetController extends Controller
         return view('recrute.postuler',compact('_job'));
     }
 
-    #recrutement home
+    #recrutement homeb
     protected function searchoffre(){
         $offre=Annonce::all()->count();
         $recruteur=Enterprise::all()->count();
