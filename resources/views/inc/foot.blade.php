@@ -29,7 +29,7 @@
                     <form action="" class="form-inli">
                             <li><a href="javascript:void();"><i class="fa fa-angle-double-right">
                             <input type="email" name="email" placeholder="votre addresse email" class="form-control">
-                            <input type="submit" value="Envoyet" class="btn btn-primary">
+                            <input type="submit" value="Envoyer" class="btn btn-primary">
                                     </i></a></li>
                     </form>
                 </ul>

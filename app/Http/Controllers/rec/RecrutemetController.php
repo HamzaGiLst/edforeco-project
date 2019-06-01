@@ -65,7 +65,7 @@ class RecrutemetController extends Controller
     protected function postuler($id){
         $_job=Annonce::findOrFail($id);
         $entreprise=Enterprise::where('nom',$_job->enterprise);
-        echo $entreprise;//addd it here
+        //echo $entreprise;//addd it here
         return view('recrute.postuler',compact('_job'));
     }
 
@@ -83,6 +83,6 @@ class RecrutemetController extends Controller
     #mailing function
     protected function sendDemendEmploi(){
         $company=Enterprise::findOrFail(3);
-        Mail::to($company->email)->send(new demandJob());
+        Mail::to('hamzaezzourguane@gmail.com')->send(new demandJob());
     }
 }

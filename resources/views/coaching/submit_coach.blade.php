@@ -1,16 +1,28 @@
 @extends("layouts.app")
 @section('title','Coaching')
-
+@section('header')
+    <link rel="stylesheet" href="css/custom.css">
+    <style>
+        #footer {
+            background: #343a40 !important;
+        }
+    </style>
+    @endsection
+@section('navbar')
+    @include('inc.hnav')
+@endsection
 @section('content')
-    <div class="container">
+    <div class="container" style="background-image: url('https://images.pexels.com/photos/1811991/pexels-photo-1811991.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');background-size: 115rem 59rem;">
         @if(count($errors)>0)
-            <div class="alert alert-warning" role="alert">
-                @foreach($errors->all() as $er)
+            @foreach($errors->all() as $er)
+                <div class="alert alert-warning" role="alert">
                     {{$er}}
-                    <hr>
-                @endforeach
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            @endforeach
 
-            </div>
         @endif
         <div class="coach_form">
             <form action="/store" method="post">
@@ -35,4 +47,5 @@
             </form>
         </div>
     </div>
+    @include('inc.foot')
 @endsection

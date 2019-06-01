@@ -78,6 +78,20 @@
             background: #28a745;
         }
 
+        .form-control1 {
+            display: block;
+            width: 213%;
+            padding: .375rem .75rem;
+            font-size: 15px;
+            line-height: 1.5;
+            color: #000000;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid #ced4da;
+            border-radius: 2.25rem;
+            transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+        }
+
     </style>
 
 @endsection
