@@ -7,4 +7,7 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 //custom
-@import "custom";
+@import 'custom';
+body{
+  font-size: 14px;
+}

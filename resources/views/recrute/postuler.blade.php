@@ -121,69 +121,105 @@
             padding: 0;
             border-style: none;
         }
+
+        .form-signin {
+            width: 100%;
+            max-width: 330px;
+            padding: 15px;
+            margin: 0 auto;
+            margin-top: 16rem;
+            background: rgba(33, 153, 167, 0.28);
+        }
+        .form-signin .checkbox {
+            font-weight: 400;
+        }
+        .form-signin .form-control {
+            position: relative;
+            box-sizing: border-box;
+            height: auto;
+            padding: 10px;
+            font-size: 16px;
+        }
+        .form-signin .form-control:focus {
+            z-index: 2;
+        }
+        .form-signin input[type="email"] {
+            margin-bottom: -1px;
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+        .form-signin input[type="password"] {
+            margin-bottom: 10px;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+        }
     </style>
 @endsection
 @section('content')
-    <div class="card">
-        <table>
-            <tr>
-                <td>Entreprise </td>
-                <td>{{ $_job->entreprise}}</td>
-                <td>gg</td>
-            </tr>
-            <tr>
-                <td> type contart :</td>
-                <td>{{ $_job->type_contrat }}</td>
-            </tr>
-        </table>
-    </div>
-    <div class="car" style="height: 10rem;width: 900px">
-        <div class="body-car">
-            <div class="applyForm">
-                <div class="form-inline">
-                    <form action="/sendDemandeJob" class="applyForm1">
-                        <input type="submit" value="Postuler" >
-                    </form>
-                    <form action="" class="applyForm2">
-                        <input type="submit" value="Save jobs" class="btn-outline" >
-                    </form>
+    @include('profiles.condidat.login')
+    <div class="pageDoffre">
+        <div class="card">
+            <table>
+                <tr>
+                    <td>Entreprise </td>
+                    <td>{{ $_job->entreprise}}</td>
+                    <td>gg</td>
+                </tr>
+                <tr>
+                    <td> type contart :</td>
+                    <td>{{ $_job->type_contrat }}</td>
+                </tr>
+            </table>
+        </div>
+        <div class="car" style="height: 10rem;width: 900px">
+            <div class="body-car">
+                <div class="applyForm">
+                    <div class="form-inline">
+                        <form action="/sendDemandeJob" class="applyForm1">
+                            <input type="submit" value="Postuler" >
+                        </form>
+                        <form action="" class="applyForm2">
+                            <input type="submit" value="Save jobs" class="btn-outline" >
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="jobDetails">
+
+        </div>
+        <div class="card col-md-10">
+            <div class="card-head">
+                <h1>ENTREPRISE</h1>
+
+                <hr>
+            </div>
+            <div class="card-body">
+                <p>
+                    <?php echo $_job->describe_entreprise?>
+                </p>
+            </div>
+        </div>
+        <div class="card col-md-10">
+            <div class="card-head">
+                <h1>DÉTAILS DE L'ANNONCE</h1>
+                <hr>
+            </div>
+            <div class="card-body">
+                <div class="poste">
+                    <h2>POSTE PROPOSÉ:<?php echo strtoupper($_job->job)?></h2>
+                    <p><?php echo $_job->describe_poste?></p>
+                </div>
+                <div class="profil">
+                    <h2>PROFIL RECHERCHÉ POUR LE POSTE:<?php echo strtoupper($_job->job)?></h2>
+                    <p>
+                        <?php echo $_job->profil_recherche?>
+                    </p>
                 </div>
             </div>
         </div>
     </div>
-    <div class="jobDetails">
 
-    </div>
-    <div class="card col-md-10">
-        <div class="card-head">
-            <h1>ENTREPRISE</h1>
-
-            <hr>
-        </div>
-        <div class="card-body">
-            <p>
-                <?php echo $_job->describe_entreprise?>
-            </p>
-        </div>
-    </div>
-    <div class="card col-md-10">
-        <div class="card-head">
-            <h1>DÉTAILS DE L'ANNONCE</h1>
-            <hr>
-        </div>
-        <div class="card-body">
-            <div class="poste">
-                <h2>POSTE PROPOSÉ:<?php echo strtoupper($_job->job)?></h2>
-                <p><?php echo $_job->describe_poste?></p>
-            </div>
-            <div class="profil">
-                <h2>PROFIL RECHERCHÉ POUR LE POSTE:<?php echo strtoupper($_job->job)?></h2>
-                <p>
-                    <?php echo $_job->profil_recherche?>
-                </p>
-            </div>
-        </div>
-    </div>
 @endsection
 @section('footer')
 

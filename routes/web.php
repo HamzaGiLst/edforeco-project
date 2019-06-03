@@ -28,6 +28,14 @@ Route::get('condidat/login','rec\ProfilesController@login_index');
 Route::resource('company','rec\ProfilecompanyController');
 
 
+Route::get('/log', function () {
+    return view('profiles.company.clogin');
+});
+Route::get('/camp', function () {
+    $post=\App\Annonce::all();
+    //dd($post);
+    return view('profiles.company.cdashboard',compact('post'));
+});
 //////
 Route::get('/', function () {
     return view('welcome');
