@@ -136,15 +136,23 @@
         <div class="col-md-3">
             <div class="sh">
                 <div class="card-head">
-                    <h1>filter</h1>
-                    <h3>Job type</h3>
-                    <h3>Location</h3>
-                    <h3>Entreprises</h3>
+                    <button type="button" class="btn btn-primary">
+                        Resultats de recherche  <span class="badge badge-light">{{$posts->count()}}</span>
+                    </button>
+                    <h5>par localisation</h5>
                     @foreach($posts as $p)
-                        {{$p['entreprise']}}
-                        <hr>
+                        <button type="button" class="btn btn-primary">
+                            {{$p->localization}} <span class="badge badge-light">4</span>
+                        </button>
                     @endforeach
-                    <h3>Postes</h3>
+                    <h5>Entreprises</h5>
+                    @foreach($posts as $p)
+                        <button type="button" class="btn btn-primary">
+                            {{$p['entreprise']}} <span class="badge badge-light">4</span>
+                        </button><br>
+
+                    @endforeach
+                    <h5>Postes</h5>
 
                 </div>
             </div>

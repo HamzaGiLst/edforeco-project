@@ -39,6 +39,10 @@
         .navbar{
             border-radius: 0px;
         }
+
+        #footer {
+            background: #343a40 !important;
+        }
     </style>
 @endsection
 @section('content')

@@ -178,7 +178,9 @@
                         <form action="/sendDemandeJob" class="applyForm1">
                             <input type="submit" value="Postuler" >
                         </form>
-                        <form action="" class="applyForm2">
+                        <form action="/savejob" class="applyForm2">
+                            <input type="hidden" name="annonceid" value="{{$_job->annonceid}}">
+                            <input type="hidden" name="condidatid" value="user">
                             <input type="submit" value="Save jobs" class="btn-outline" >
                         </form>
                     </div>

@@ -128,7 +128,7 @@
                         <a class="nav-link" href="/condidats"><button class="btn1 btn-outline-danger1">S'inscrire</button></a>
                     </li>
                     <li class="nav-item" id="s3">
-                        <a class="nav-link " href="/login"><button class="btn1 btn-outline-primary1">Espace Recruteur</button></a>
+                        <a class="nav-link " href="/camp"><button class="btn1 btn-outline-primary1">Espace Recruteur</button></a>
                     </li>
 
             </ul>

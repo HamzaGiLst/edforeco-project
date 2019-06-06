@@ -7,6 +7,7 @@ use App\Condidat;
 use App\Enterprise;
 use App\Http\Requests\AnnonceRequest;
 use App\Mail\demandJob;
+use App\SaveAnnonce;
 use Illuminate\Http\Request;
 use Illuminate\Httprequest;
 use App\Http\Controllers\Controller;
@@ -30,7 +31,7 @@ class RecrutemetController extends Controller
         $post->describe_poste=request('desc_poste');
         $post->profil_recherche=request('profil_needed');
         $post->save();
-        return redirect('/p');
+        return redirect('/camp');
     }
     ////show job offres with conditions
     protected function showJobs(Request $request){
@@ -76,7 +77,14 @@ class RecrutemetController extends Controller
         $chercheur=Condidat::all()->count();
         return view('recrute.entreprise.recruteHome',compact('offre','recruteur','chercheur'));
     }
+    #save job
 
+    protected function save_job(Request $request){
+        $save = new SaveAnnonce;
+        $save->annonce_id = $request->annonceid;
+        $save->save();
+        return redirect()->back();
+    }
 
 
 

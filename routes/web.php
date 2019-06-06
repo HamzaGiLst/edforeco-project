@@ -31,17 +31,17 @@ Route::resource('company','rec\ProfilecompanyController');
 Route::get('/log', function () {
     return view('profiles.company.clogin');
 });
-Route::get('/camp', function () {
+Route::get('/camp',['middleware'=>'education', function () {
     $post=\App\Annonce::all();
     //dd($post);
     return view('profiles.company.cdashboard',compact('post'));
-});
+}]);
 //////
-Route::get('/', function () {
-    return view('welcome');
-});
+/// Route::get('/', function () {
+//    return view('welcome');
+//});
 
-Route::get('/site', function () {
+Route::get('/', function () {
     return view('mainapp');
 });
 
@@ -92,6 +92,9 @@ Route::get('/rhome','rec\RecrutemetController@searchoffre');
 Route::get('/job/{id}','rec\RecrutemetController@postuler');
 
 Route::get('/jobs','rec\RecrutemetController@showJobs');
+// save jobs
+
+Route::get('/savejob','rec\RecrutemetController@save_job');
 
 //mail demande emploi
 Route::get('/sendDemandeJob','rec\RecrutemetController@sendDemendEmploi');
@@ -106,3 +109,12 @@ Route::get('/admin','AdminController@traiter_formation');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+
+#----------------------------------------------------------------#
+#                   Profiles                                     #
+#----------------------------------------------------------------#
+
+Route::post('/logintoprofile','rec\ProfilecompanyController@login');
+Route::get('/delete/{id}','rec\ProfilecompanyController@deleteAnnonce');
