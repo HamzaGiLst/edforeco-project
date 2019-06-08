@@ -10,10 +10,9 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <title>edforeco | @yield('title') </title>
-
     @yield('header')
 </head>
-<body>
+<body style="font-size: 13px">
 @yield('navbar')
 @yield('content')
 <div class="">
