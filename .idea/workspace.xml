@@ -2,19 +2,326 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d8612453-b493-4a1c-aa45-8caacebba3d3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/rec/RecrutemetController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/rec/RecrutemetController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/inc/backtoTop.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/inc/backtoTop.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/inc/foot.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/inc/foot.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/mainapp.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/mainapp.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/profiles/company/cdashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profiles/company/cdashboard.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/profiles/company/clogin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profiles/company/clogin.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/profiles/condidat/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profiles/condidat/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/recrute/entreprise/post.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/recrute/entreprise/post.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/recrute/entreprise/recruteHome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/recrute/entreprise/recruteHome.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/recrute/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/recrute/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/recrute/postuler.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/recrute/postuler.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Condidat.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Enterprise.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/newsLetterController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/rec/ProfilecompanyController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/rec/ProfilesController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/EdacutionMiddleware.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/AnnonceRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/CoachRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/CondidatAccountRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/EnrepriseAccountRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/FormationRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/NewsletterRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Mail/demandJob.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/NewsLetter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/SaveAnnonce.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2019_05_21_105934_create_save_annonces_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2019_05_23_214515_create_enterprises_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2019_05_23_214539_create_condidats_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2019_06_14_202248_create_news_letters_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/animate.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/reset.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/adult-african-announcing-1059114.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/adult-chart-close-up-1043514.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/back.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/coach.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/emploi.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/formation.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/choices.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/.github/ISSUE_TEMPLATE.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/License.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/bower.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/froala_editor.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/froala_editor.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/froala_editor.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/froala_editor.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/froala_editor.pkgd.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/froala_editor.pkgd.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/froala_editor.pkgd.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/froala_editor.pkgd.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/froala_style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/froala_style.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/froala_style.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/froala_style.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/plugins/char_counter.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/plugins/char_counter.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/plugins/char_counter.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/plugins/char_counter.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/plugins/code_view.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/plugins/code_view.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/plugins/code_view.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/plugins/code_view.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/plugins/colors.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/plugins/colors.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/plugins/colors.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/plugins/colors.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/plugins/draggable.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/plugins/draggable.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/plugins/draggable.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/plugins/draggable.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/plugins/emoticons.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/plugins/emoticons.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/plugins/emoticons.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/plugins/emoticons.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/plugins/file.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/plugins/file.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/plugins/file.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/plugins/file.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/plugins/fullscreen.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/plugins/fullscreen.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/plugins/fullscreen.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/plugins/fullscreen.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/plugins/help.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/plugins/help.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/plugins/help.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/plugins/help.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/plugins/image.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/plugins/image.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/plugins/image.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/plugins/image.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/plugins/image_manager.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/plugins/image_manager.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/plugins/image_manager.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/plugins/image_manager.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/plugins/line_breaker.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/plugins/line_breaker.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/plugins/line_breaker.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/plugins/line_breaker.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/plugins/quick_insert.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/plugins/quick_insert.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/plugins/quick_insert.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/plugins/quick_insert.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/plugins/special_characters.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/plugins/special_characters.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/plugins/special_characters.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/plugins/special_characters.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/plugins/table.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/plugins/table.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/plugins/table.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/plugins/table.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/plugins/video.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/plugins/video.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/plugins/video.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/plugins/video.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/themes/dark.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/themes/dark.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/themes/dark.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/themes/dark.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/themes/gray.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/themes/gray.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/themes/gray.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/themes/gray.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/third_party/embedly.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/third_party/embedly.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/third_party/embedly.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/third_party/embedly.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/third_party/font_awesome.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/third_party/font_awesome.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/third_party/font_awesome.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/third_party/font_awesome.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/third_party/image_tui.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/third_party/image_tui.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/third_party/image_tui.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/third_party/image_tui.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/third_party/spell_checker.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/third_party/spell_checker.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/third_party/spell_checker.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/css/third_party/spell_checker.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/editor.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/3rd-party/aviary/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/3rd-party/bootstrap/grid.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/3rd-party/bootstrap/lists.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/3rd-party/bootstrap/modal.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/3rd-party/code-mirror.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/3rd-party/font-awesome-5-css.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/3rd-party/font-awesome-5-js.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/3rd-party/jquery/mobile.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/3rd-party/jquery/ui_modal.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/3rd-party/spell-checker/spell-checker.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/3rd-party/tui/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/api/get_html.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/api/init_destroy.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/api/insert_html.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/api/live_code_preview.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/api/live_content_preview.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/api/selection.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/buttons/custom_buttons.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/buttons/custom_dropdown.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/buttons/external_button.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/buttons/subscript_superscript.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/events/blur_focus.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/events/content_changed.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/events/drop.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/events/image_removed.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/events/initialized_destroy.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/file_s3_upload.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/image/custom_button.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/image/default_width.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/image/image_styles.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/image/insert_base64.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/image_s3_upload.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/init_inside_iframe/basic.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/init_inside_iframe/content.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/init_inside_iframe/inline.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/init_on_click/basic.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/init_on_click/inline.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/init_on_click/two_editors.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/initialization/edit_in_popup.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/initialization/init_on_button.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/initialization/init_on_click.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/initialization/init_on_h1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/initialization/init_on_image.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/initialization/init_on_link.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/initialization/initialized_event.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/international/direction_rtl.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/international/language.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/international/rtl_ltr_buttons.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/link/custom_validation.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/link/link_styles.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/link/predefined_links.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/misc/scrollable_container.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/misc/scrollable_container_inline.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/paragraph_modes/enter_br.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/paragraph_modes/enter_div.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/paragraph_modes/enter_p.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/paste/attrs.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/paste/plain.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/paste/tags.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/plugins/char_counter.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/plugins/full_screen.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/plugins/line_breaker.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/plugins/quick_insert.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/popular/disable_edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/popular/disable_paragraphs.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/popular/full.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/popular/full_page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/popular/iframe.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/popular/init_on_click.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/popular/textarea.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/popular/toolbar_buttons.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/popular/toolbar_inline.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/popular/two_instances.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/popular/z_index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/popups/colors.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/popups/custom.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/popups/emoticons.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/styling/adjustable_height.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/styling/font_family.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/styling/height.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/styling/inline.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/styling/paragraph.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/styling/placeholder.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/styling/width.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/table/cell_style.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/table/insert_helper.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/table/nested.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/table/resize.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/table/style.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/themes/dark.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/themes/gray.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/toolbar/bottom.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/toolbar/bottom_offset.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/toolbar/buttons.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/toolbar/external.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/toolbar/external_inline.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/toolbar/inline.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/toolbar/inline_selection.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/toolbar/offset.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/toolbar/show_selection.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/toolbar/sticky.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/typing/keep_format.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/typing/shortcuts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/html/typing/tab.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/img/photo1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/js/froala_editor.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/js/froala_editor.pkgd.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/js/languages/ar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/js/languages/bs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/js/languages/cs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/js/languages/da.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/js/languages/de.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/js/languages/el.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/js/languages/en_ca.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/js/languages/en_gb.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/js/languages/es.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/js/languages/et.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/js/languages/fa.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/js/languages/fi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/js/languages/fr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/js/languages/he.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/js/languages/hr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/js/languages/hu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/js/languages/id.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/js/languages/it.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/js/languages/ja.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/js/languages/ko.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/js/languages/ku.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/js/languages/me.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/js/languages/nb.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/js/languages/nl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/js/languages/pl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/js/languages/pt_br.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/js/languages/pt_pt.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/js/languages/ro.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/js/languages/ru.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/js/languages/sk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/js/languages/sr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/js/languages/sv.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/js/languages/th.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/js/languages/tr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/js/languages/uk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/js/languages/vi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/js/languages/zh_cn.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/js/languages/zh_tw.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/js/plugins/align.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/js/plugins/char_counter.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/js/plugins/code_beautifier.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/js/plugins/code_view.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/js/plugins/colors.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/js/plugins/draggable.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/js/plugins/edit_in_popup.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/js/plugins/emoticons.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/js/plugins/entities.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/js/plugins/file.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/js/plugins/font_family.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/js/plugins/font_size.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/js/plugins/forms.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/js/plugins/fullscreen.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/js/plugins/help.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/js/plugins/image.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/js/plugins/image_manager.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/js/plugins/inline_class.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/js/plugins/inline_style.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/js/plugins/line_breaker.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/js/plugins/line_height.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/js/plugins/link.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/js/plugins/lists.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/js/plugins/paragraph_format.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/js/plugins/paragraph_style.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/js/plugins/print.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/js/plugins/quick_insert.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/js/plugins/quote.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/js/plugins/save.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/js/plugins/special_characters.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/js/plugins/table.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/js/plugins/url.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/js/plugins/video.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/js/plugins/word_paste.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/js/third_party/embedly.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/js/third_party/font_awesome.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/js/third_party/image_tui.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/js/third_party/spell_checker.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/node_modules/froala-editor/package.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -71,7 +378,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Requests/NewsletterRequest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
+            <state relative-caret-position="72">
               <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
             </state>
           </provider>
@@ -499,7 +806,7 @@
       <workItem from="1560280590338" duration="1596000" />
       <workItem from="1560282272112" duration="33000" />
       <workItem from="1560522243954" duration="703000" />
-      <workItem from="1560523010446" duration="17122000" />
+      <workItem from="1560523010446" duration="17524000" />
     </task>
     <task id="LOCAL-00001" summary="version 0.0.1">
       <created>1558361888327</created>
@@ -571,11 +878,18 @@
       <option name="project" value="LOCAL" />
       <updated>1560021794422</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="version 0.1.3">
+      <created>1560545604825</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1560545604825</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="356842000" />
+    <option name="totallyTimeSpent" value="357244000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -587,7 +901,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="1" width="1368" height="768" extended-state="6" />
+    <frame x="-1" y="1" width="1368" height="767" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49921754" visible="true" weight="0.31060606" />
@@ -693,7 +1007,8 @@
     <MESSAGE value="version 0.0.1" />
     <MESSAGE value="version 0.1.1" />
     <MESSAGE value="version 0.1.2" />
-    <option name="LAST_COMMIT_MESSAGE" value="version 0.1.2" />
+    <MESSAGE value="version 0.1.3" />
+    <option name="LAST_COMMIT_MESSAGE" value="version 0.1.3" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.env.example">
@@ -1098,7 +1413,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Requests/NewsletterRequest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
+        <state relative-caret-position="72">
           <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
         </state>
       </provider>
