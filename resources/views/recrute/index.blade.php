@@ -133,7 +133,7 @@
             </form>
         </div>
     </div>
-        <div class="col-md-3">
+        <div class="col-md-3" >
             <div class="sh">
                 <div class="card-head">
                     <button type="button" class="btn btn-primary">
@@ -159,7 +159,7 @@
         </div>
 
         <!--- justify-content-center-->
-            <div class="col-md-9">
+            <div class="col-md-9" style=" min-height: 37rem;">
                     <!--           <div class="card-header">Dashboard</div>-->
 
 

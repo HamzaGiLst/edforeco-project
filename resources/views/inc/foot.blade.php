@@ -16,17 +16,18 @@
             <div class="col-xs-12 col-sm-4 col-md-4">
                 <h5>Navigation rapide</h5>
                 <ul class="list-unstyled quick-links">
-                    <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>page d'accueil</a></li>
-                    <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Formation et Education</a></li>
-                    <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Coaching</a></li>
-                    <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Espace condidat</a></li>
+                    <li><a href="/"><i class="fa fa-angle-double-right"></i>page d'accueil</a></li>
+                    <li><a href="/formation"><i class="fa fa-angle-double-right"></i>Formation et Education</a></li>
+                    <li><a href="/coaching"><i class="fa fa-angle-double-right"></i>Coaching</a></li>
+                    <li><a href="/camp"><i class="fa fa-angle-double-right"></i>Espace condidat</a></li>
                     <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Espace Entreprise</a></li>
                 </ul>
             </div>
             <div class="col-xs-12 col-sm-4 col-md-4">
                 <h5>Newsletter</h5>
                 <ul class="list-unstyled quick-links">
-                    <form action="" class="form-inli">
+                    <form action="/newsletter" class="form-inli" method="post">
+                        @csrf
                             <li><a href="javascript:void();"><i class="fa fa-angle-double-right">
                             <input type="email" name="email" placeholder="votre addresse email" class="form-control">
                             <input type="submit" value="Envoyer" class="btn btn-primary">

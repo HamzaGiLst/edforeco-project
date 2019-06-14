@@ -2,7 +2,7 @@
 
 @section('title','Job Details')
 @section('header')
-    <link rel="stylesheet" href="../css/app.css">
+    <link rel="stylesheet" href="../../css/app.css">
     <style>
         .applyForm{
 
@@ -156,7 +156,7 @@
     </style>
 @endsection
 @section('content')
-    @include('profiles.condidat.login')
+
     <div class="pageDoffre">
         <div class="card">
             <table>

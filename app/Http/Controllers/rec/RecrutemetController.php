@@ -59,14 +59,15 @@ class RecrutemetController extends Controller
 
     ///////////poste un annonce
     protected function post_page(){
-        return view('recrute.entreprise.post');
+        $secteur=[ 'Agroalimentaire', 'Banque/Assurance', 'Bois/Papier/Carton / Imprimerie', 'BTP / Matériaux de construction','Chimie / Parachimie ','Commerce / Négoce / Distribution',  'Édition / Communication / Multimédia',  'Électronique / Électricité' , 'Études et conseils' , 'Industrie pharmaceutique' ,
+            'Informatique / Télécoms' , 'Machines et équipements / Automobile',  'Métallurgie / Travail du métal' , 'Plastique / Caoutchouc',  'Services aux entreprises',  'Textile / Habillement / Chaussure'];
+        return view('recrute.entreprise.post',compact('secteur'));
     }
      ////postuler
 
     protected function postuler($id){
         $_job=Annonce::findOrFail($id);
         $entreprise=Enterprise::where('nom',$_job->enterprise);
-        //echo $entreprise;//addd it here
         return view('recrute.postuler',compact('_job'));
     }
 

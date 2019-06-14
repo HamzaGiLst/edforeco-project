@@ -82,7 +82,7 @@ Route::post('/store','coach\CoachingController@open_case');
 #----------------------------------------------------------------#
 #                   RECRUTENET EMPLOIr ROUTE                     #
 #----------------------------------------------------------------#
-Route::get('/p','rec\RecrutemetController@post_page');
+Route::get('/p','rec\RecrutemetController@post_page')->middleware('education');
 
 Route::post('/postannonce','rec\RecrutemetController@post_annoce');
 
@@ -118,3 +118,14 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::post('/logintoprofile','rec\ProfilecompanyController@login');
 Route::get('/delete/{id}','rec\ProfilecompanyController@deleteAnnonce');
+Route::get('/entreprise/logout','rec\ProfilecompanyController@loggedOut');
+
+########condidat
+Route::post('/loginCondidat','rec\ProfilesController@login');
+Route::get('/condidat/1','rec\ProfilesController@profile');
+
+
+#--------------------------------------------------
+#                 Newsletter
+#---------------------------------------------------
+Route::post('/newsletter','newsLetterController@maillist');

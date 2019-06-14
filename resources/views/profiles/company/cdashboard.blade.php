@@ -297,6 +297,12 @@
                             <span data-feather="calendar"></span>
                             This week
                         </button>
+                        <div class="btn-group mr-2">
+                            <a href="/entreprise/logout">
+                                <button class="btn btn-lg btn-danger btn-block">logout</button>
+                            </a>
+                        </div>
+
                     </div>
                 </div>
                 <h2 class="profil">Profile</h2>
@@ -326,6 +332,7 @@
                             <th>#N annonce</th>
                             <th>Date</th>
                             <th>Poste</th>
+                            <th>Secteur d'activité</th>
                             <th>Localisation</th>
                             <th>Email</th>
                             <th>Type de contrat</th>
@@ -342,6 +349,7 @@
                                 <td><?php echo $p['annonceid'] ?></td>
                                 <td>{{$p['created_at']}}</td>
                                 <td>{{$p['job']}}</td>
+                                <td>{{$p['per_temp']}}</td>
                                 <td>{{$p['localization']}}</td>
                                 <td>{{$p['email']}}</td>
                                 <td>{{$p['type_contrat']}}</td>

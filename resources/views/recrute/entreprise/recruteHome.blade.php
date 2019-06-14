@@ -122,7 +122,7 @@
                     </div>
                 </li>
                     <li class="nav-item" id="side">
-                        <a class="nav-link" href="/login"><button class="btn1 btn-pill btn-outline-success1">Conecter</button></a>
+                        <a class="nav-link" href="/condidat/login"><button class="btn1 btn-pill btn-outline-success1">Conecter</button></a>
                     </li>
                     <li class="nav-item" id="s2">
                         <a class="nav-link" href="/condidats"><button class="btn1 btn-outline-danger1">S'inscrire</button></a>
@@ -157,6 +157,7 @@
             <span class="info"></span>
         </form>
     </div>
+
     <div class="card">
         <div class="card-head" >
             <div class="text-center">
