@@ -18,17 +18,25 @@
             line-height: 20px!important;
         }
 
+        .material-icons {
+            font-size: 2.25rem!important;
+
+        }
+
+        label{
+            margin-top: 16px;
+            margin-bottom: 13px;
+        }
+        .confirm{
+            margin-top: 1.75rem;
+            margin-bottom: 20px;
+            margin-left: 32rem;
+        }
+
     </style>
+    @include('inc.froalaeditor')
 
-    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js"></script>
-    <script>tinymce.init({selector:'textarea'});
 
-        new FroalaEditor('div#editor', {
-            // Set dark theme name.
-            theme: 'dark',
-            zIndex: 2003
-        })
-    </script>
 @endsection
 @section('content')
     <div class="dark-edition">
@@ -179,8 +187,8 @@
                                                     <textarea id="editor" name="profil_needed" class="md-textarea form-control" rows="3"></textarea>
                                                 </div>
                                                 <div class="confirm">
-                                                    <button class="btn btn-danger">Preview</button>
-                                                    <input type="submit" value="confirm" class="btn btn-primary" >
+                                                    <button class="btn btn-danger" style="font-size: 13px">Preview</button>
+                                                    <input type="submit" value="confirm" class="btn btn-primary" style="font-size: 13px">
                                                </div>
                                         </form>
                                     </div>

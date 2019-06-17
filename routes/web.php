@@ -102,6 +102,8 @@ Route::get('/sendDemandeJob','rec\RecrutemetController@sendDemendEmploi');
 #                   ADMIN ROUTE           -                      #
 #----------------------------------------------------------------#
 Route::get('/admin','AdminController@adminPanel');
+Route::get('/adminFormation','AdminController@adminPanelFormation');
+Route::get('/adminCoaching','AdminController@adminPanelCoaching');
 
 
 

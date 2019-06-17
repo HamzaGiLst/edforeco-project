@@ -34,7 +34,7 @@
             color: var(--orange);
         }
         #side{
-            margin-left: 48rem;
+            margin-left: 33rem;
         }
         #s2 ,#s3 {
             margin-left: 2rem;

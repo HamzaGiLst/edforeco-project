@@ -13,8 +13,8 @@
     $("document").ready(function () {
         new FroalaEditor('#editor',{
             // Set dark theme name.
-            theme: 'dark',
-            zIndex: 2003
+            theme: 'gray',
+            zIndex: 2001
         })
     });
 </script>

@@ -18,4 +18,15 @@ class AdminController extends Controller
         return view('admin.dashboard',compact('edu','coach'));
     }
 
+
+    protected function adminPanelFormation(){
+        $edu = Formation::all();
+
+        return view('admin.formation',compact('edu'));
+    }
+    protected function adminPanelCoaching(){
+        $coach=Coaching::all();
+        return view('admin.caoch',compact('coach'));
+    }
+
 }

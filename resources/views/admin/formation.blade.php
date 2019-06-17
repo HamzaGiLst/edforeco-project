@@ -1,5 +1,5 @@
 @extends('layouts.proapp')
-@section('title','profile d entreprise')
+@section('title','Admin ')
 @section('header')
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
@@ -22,12 +22,26 @@
             font-size: 2.25rem!important;
 
         }
+
+        /* body offormation*/
+
+        .dark-edition {
+            background-color: #33364914;
+        }
+        .dark-edition .table>thead>tr>th, .dark-edition .table>tbody>tr>th, .dark-edition .table>tfoot>tr>th, .dark-edition .table>thead>tr>td, .dark-edition .table>tbody>tr>td, .dark-edition .table>tfoot>tr>td {
+            color: var(--white);
+            border-color: rgba(180, 180, 180, 0.1);
+        }
+
+        .dark-edition .card {
+            background: #6c757dad;
+        }
     </style>
 @endsection
 @section('content')
     <div class="">
         <div class="wrapper ">
-            <div class="sidebar" data-color="orange" data-background-color="black" data-image="./assets/img/sidebar-2.jpg">
+            <div class="sidebar" data-color="azure" data-background-color="black" data-image="./assets/img/sidebar-2.jpg">
                 <!--
                 Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
 
@@ -40,32 +54,35 @@
                 </div>
                 <div class="sidebar-wrapper">
                     <ul class="nav">
-                        <li class="nav-item  ">
-                            <a class="nav-link" href="/entreprise">
+                        <li class="nav-item ">
+                            <a class="nav-link" href="/admin">
                                 <i class="material-icons">dashboard</i>
-                                <p>Dashboard</p>
+                                <p>Admin Dashboard</p>
                             </a>
                         </li>
                         <li class="nav-item ">
-                            <a class="nav-link" href="/entrepriseUser">
+                            <a class="nav-link" href="">
                                 <i class="material-icons">person</i>
                                 <p>User Profile</p>
                             </a>
                         </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="/entrepriseNosoffre">
+                        <li class="nav-item active ">
+                            <a class="nav-link" href="/adminFormation">
                                 <i class="material-icons">content_paste</i>
-                                <p>Nos Offres</p>
+                                <p>Formation et education</p>
                             </a>
+                        </li>
                         <li class="nav-item ">
-                            <a class="nav-link" href="/entrepriseNewoffre">
+                            <a class="nav-link" href="/adminCoaching">
                                 <i class="material-icons">note_add</i>
-                                <p>Noouvelle Offres</p>
+                                <p>Coaching</p>
                             </a>
-                        </li>                           <!-- your sidebar here -->
+                        </li>
+                        <!-- your sidebar here -->
                     </ul>
                 </div>
             </div>
+
             <div class="main-panel">
                 <!-- Navbar -->
                 <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
@@ -120,43 +137,30 @@
                             <div class="col-md-12">
                                 <div class="card">
                                     <div class="card-header card-header-primary">
-                                        <h4 class="card-title ">Simple Table</h4>
-                                        <p class="card-category"> Here is a subtitle for this table</p>
+                                        <h4 class="card-title ">Demande de Formation</h4>
+                                        <p class="card-category"> la Liste des demande de formation</p>
                                     </div>
                                     <div class="card-body">
                                         <div class="table-responsive">
                                             <table class="table">
                                                 <thead class=" text-primary">
                                                 <tr>
-                                                    <th>#N annonce</th>
-                                                    <th>Date</th>
-                                                    <th>Poste</th>
-                                                    <th>Secteur d'activité</th>
-                                                    <th>Localisation</th>
-                                                    <th>Email</th>
-                                                    <th>Type de contrat</th>
-                                                    <th>Salaire</th>
-                                                    <th>Description d'entreprise</th>
-                                                    <th>Description de poste</th>
-                                                    <th>Profil rechrche</th>
+                                                    <th>Entreprise</th>
+                                                    <th>Telephone</th>
+                                                    <th>Formation</th>
+                                                    <th>Besoin</th>
+                                                    <th>Details</th>
 
                                                 </tr>
                                                 </thead>
                                                 <tbody>
-                                                @foreach($post as $p)
+                                                @foreach($edu as $e)
                                                     <tr>
-                                                        <td><?php echo $p['annonceid'] ?></td>
-                                                        <td>{{$p['created_at']}}</td>
-                                                        <td>{{$p['job']}}</td>
-                                                        <td>{{$p['per_temp']}}</td>
-                                                        <td>{{$p['localization']}}</td>
-                                                        <td>{{$p['email']}}</td>
-                                                        <td>{{$p['type_contrat']}}</td>
-                                                        <td>{{$p['startsalary']}}</td>
-                                                        <td style="width: auto"><?php echo $p['describe_entreprise'] ?></td>
-                                                        <td><?php echo $p['describe_poste'] ?></td>
-                                                        <td><?php echo $p['profil_recherche'] ?></td>
-                                                        <td><a href="/delete/{{$p['annonceid']}}"><button class="btn btn-danger">Supprimer</button></a></td>
+                                                        <td>{{$e->entreprise}}</td>
+                                                        <td>{{$e->phone}}</td>
+                                                        <td>{{$e->formation}}</td>
+                                                        <td>{{$e->besoin}}</td>
+                                                        <td>{{$e->note}}</td>
                                                     </tr>
                                                 @endforeach
                                                 </tbody>
@@ -168,7 +172,7 @@
                         </div>
                     </div>
                 </div>
-                        <!-- your content here -->
+                <!-- your content here -->
 
 
                 <footer class="footer">

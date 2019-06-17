@@ -18,6 +18,11 @@
             line-height: 20px!important;
         }
 
+      .material-icons {
+            font-size: 2.25rem!important;
+
+        }
+
     </style>
 @endsection
 @section('content')
