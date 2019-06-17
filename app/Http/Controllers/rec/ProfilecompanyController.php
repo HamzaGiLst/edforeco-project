@@ -57,44 +57,31 @@ class ProfilecompanyController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Request $request)
     {
         $post=\App\Annonce::all();
-
-        return view('profiles.company.cdashboard',compact('post'));
+        $company=Enterprise::findOrFail($request->session()->get('companyId')->id);
+        return view('profiles.company.cdashboard',compact('post','company'));
 
     }
 
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
+
+    public function editComp(Request $request)
     {
-        //
+        $company=Enterprise::findOrFail($request->session()->get('companyId')->id);
+        $company->nom =$request->nom;
+        $company->site=$request->site;
+        $company->city=$request->city;
+        $company->country=$request->country;
+
+        $company->email=$request->email;
+        $company->save();
+        return redirect()->back();
+
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {
         //
@@ -118,7 +105,7 @@ class ProfilecompanyController extends Controller
                 $request->session()->put('status','logcompany');
 
                 //return session()->all();
-                return redirect('/camp');
+                return redirect('/entreprise');
             }else{
                 return 'password false';
             }
@@ -137,6 +124,6 @@ class ProfilecompanyController extends Controller
 
     protected function deleteAnnonce($id){
         Annonce::destroy($id);
-        return redirect('/camp');
+        return redirect()->back();
     }
 }

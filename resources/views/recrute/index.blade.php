@@ -75,38 +75,56 @@
         #navbar-custom{
             background: #000;
         }
+        #footer{
+            background-color: #b0ab93 !important;
+        }
+        .navbar {
+            padding-top: 0px;
+            padding: 0px;
+            position: relative;
+            min-height: 50px;
+            height: 124px;
+            border-top: 0px;
+            margin-bottom: 20px;
+            border: 1px solid transparent;
+        }
     </style>
 @endsection
 
 @section('navbar')
-    <nav class="navbar navbar-expand navbar-dark bg-dark">
-        <a class="navbar-brand" href="/rhome">EDFORECO</a>
-        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light1">
+        <a class="navbar-brand" href="#"><img src="https://www.freelogodesign.org/file/app/client/thumb/df10a544-12c1-4fa1-a7c0-f3322715dd93_200x200.png?1560709818159" alt=""style="position: relative;
+    top: -75px;
+    left: 24px;"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="navbar-collapse collapse" id="navbarsExample01" style="">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="/site" style="color: #ff3931;">Accueil <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">OFFRES</a>
+                    <a class="nav-link" href="/rhome" style="color: #ff3931;">Offres</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Entreprise</a>
+                    <a class="nav-link" href="/company" style="color: #ff3931;">Entreprise</a>
                 </li>
                 <li class="nav-item dropdown dropdown-menu-right">
-                    <a class="nav-link dropdown-toggle" href="" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">services</a>
+                    <a  style="color: #ff3931;" class="nav-link dropdown-toggle" href="" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
                     <div class="dropdown-menu" aria-labelledby="dropdown01">
                         <a class="dropdown-item" href="#">Action</a>
                         <a class="dropdown-item" href="#">Another action</a>
                         <a class="dropdown-item" href="#">Something else here</a>
                     </div>
                 </li>
+
             </ul>
+
         </div>
     </nav>
+
 
 @endsection
 @section('content')
@@ -196,7 +214,7 @@
             </div>
         </div>
     </div>
-    <section id="footer">
+    <section id="footer" style="color: #b0ab93 !important">
         <div class="container">
              <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">

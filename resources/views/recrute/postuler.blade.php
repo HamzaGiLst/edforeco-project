@@ -153,7 +153,52 @@
             border-top-left-radius: 0;
             border-top-right-radius: 0;
         }
+        .bg-light1{
+            background: rgba(218, 216, 254, 0.44);
+            margin: 0px;
+            height: 10rem;
+        }
+
+        .pageDoffre{
+            margin-top: 18px;
+            margin-bottom: 18px;
+        }
+
     </style>
+@endsection
+@section('navbar')
+    <nav class="navbar navbar-expand-lg navbar-light bg-light1">
+        <a class="navbar-brand" href="#"><img src="/img/logo.png" alt=""style="position: relative;
+    top: -75px;
+    left: 24px;"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/site" style="color: #ff3931;">Accueil <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/rhome" style="color: #ff3931;">Offres</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/company" style="color: #ff3931;">Entreprise</a>
+                </li>
+                <li class="nav-item dropdown dropdown-menu-right">
+                    <a  style="color: #ff3931;" class="nav-link dropdown-toggle" href="" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown01">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+
+            </ul>
+
+        </div>
+    </nav>
 @endsection
 @section('content')
 
@@ -163,12 +208,14 @@
                 <tr>
                     <td>Entreprise </td>
                     <td>{{ $_job->entreprise}}</td>
-                    <td>gg</td>
+                    <td>Secteur</td>
+                    <td>{{$_job['per_temp']}}</td>
                 </tr>
                 <tr>
                     <td> type contart :</td>
                     <td>{{ $_job->type_contrat }}</td>
                 </tr>
+
             </table>
         </div>
         <div class="car" style="height: 10rem;width: 900px">

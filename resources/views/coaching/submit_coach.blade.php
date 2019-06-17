@@ -192,6 +192,15 @@
                         <input type="text" name="tel" id="tree" class="form-control">
                     </div>
                     <div class="group-control">
+                        <select class="">
+                            @foreach($categorie as $c)
+                                <option value="">{{$c}}</option>
+                            @endforeach
+                        </select>
+
+
+                    </div>
+                    <div class="group-control">
                         <label for="for">Description de votre besoin</label>
                         <input type="text" name="besoin" id="for" class="form-control" >
                     </div>

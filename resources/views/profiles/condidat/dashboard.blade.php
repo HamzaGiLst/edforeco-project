@@ -3,7 +3,7 @@
 @section('content')
     <div class="card">
         <h2>welcome {{$condidat->nom}} to your profile user</h2>
-        <img src="{{$condidat->cv}}" alt="">
+        <img src="{{asset($condidat->cv)}}" alt="">
         <div class="card-body">
 
         </div>
@@ -14,3 +14,6 @@
         @endforeach
 
     @endsection
+
+
+

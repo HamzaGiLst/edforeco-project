@@ -43,6 +43,7 @@ class RecrutemetController extends Controller
                     ->where('localization','like','%'.$where.'%')
                     ->paginate(4)
                 ;
+
                 return view('recrute.index',compact('posts'));
             }
         }

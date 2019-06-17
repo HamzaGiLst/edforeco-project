@@ -11,7 +11,11 @@ class CoachingController extends Controller
 {
     //
     protected function index(){
-        return view('coaching.submit_coach');
+        $categorie=[
+            'Business coaching',
+            'coaching de cadre supieure'
+        ];
+        return view('coaching.submit_coach',compact('categorie'));
     }
 
     protected function open_case(CoachRequest $request){

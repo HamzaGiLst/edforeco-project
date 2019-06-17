@@ -1,5 +1,6 @@
 <?php
 
+use App\Enterprise;
 use App\Formation;
 use Illuminate\Support\Facades\DB ;
 
@@ -33,7 +34,6 @@ Route::get('/log', function () {
 });
 Route::get('/camp',['middleware'=>'education', function () {
     $post=\App\Annonce::all();
-    //dd($post);
     return view('profiles.company.cdashboard',compact('post'));
 }]);
 //////
@@ -118,7 +118,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::post('/logintoprofile','rec\ProfilecompanyController@login');
 Route::get('/delete/{id}','rec\ProfilecompanyController@deleteAnnonce');
+Route::post('/update','rec\ProfilecompanyController@editComp');
 Route::get('/entreprise/logout','rec\ProfilecompanyController@loggedOut');
+Route::get('/entreprise','rec\ProfilecompanyController@show')->middleware('education');
 
 ########condidat
 Route::post('/loginCondidat','rec\ProfilesController@login');
@@ -129,3 +131,23 @@ Route::get('/condidat/1','rec\ProfilesController@profile');
 #                 Newsletter
 #---------------------------------------------------
 Route::post('/newsletter','newsLetterController@maillist');
+
+#--------------------------------------------------
+#                 Template pour users
+#---------------------------------------------------
+Route::get('/entrepriseUser',function (){
+    return view('profiles.company.template.static');
+});
+Route::get('/entrepriseNosoffre',function (\Illuminate\Http\Request $request){
+
+    $post=\App\Annonce::all();
+    $company=Enterprise::findOrFail($request->session()->get('companyId')->id);
+
+    return view('profiles.company.template.offre',compact('post','company'));
+});
+Route::get('/entrepriseNewoffre',function (){
+    $secteur=[ 'Agroalimentaire', 'Banque/Assurance', 'Bois/Papier/Carton / Imprimerie', 'BTP / Matériaux de construction','Chimie / Parachimie ','Commerce / Négoce / Distribution',  'Édition / Communication / Multimédia',  'Électronique / Électricité' , 'Études et conseils' , 'Industrie pharmaceutique' ,
+        'Informatique / Télécoms' , 'Machines et équipements / Automobile',  'Métallurgie / Travail du métal' , 'Plastique / Caoutchouc',  'Services aux entreprises',  'Textile / Habillement / Chaussure'];
+
+    return view('profiles.company.template.addoffre',compact('secteur'));
+});

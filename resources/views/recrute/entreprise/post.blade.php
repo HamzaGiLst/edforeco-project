@@ -22,7 +22,7 @@
 @endsection
 @section('content')
     <div class="container">
-        <div class="card-body"><a href="/camp"><button class="btn btn-dark btn-block">Dashboard</button></a></div>
+        <div class="card-body"><a href="/entreprise"><button class="btn btn-dark btn-block">Dashboard</button></a></div>
         <div class="card-body">
             <h1>Poster JOB</h1>
             <div class="row justify-content-xl">
@@ -87,7 +87,7 @@
                                 </div>
                                 <div class="confirm">
                                     <button class="btn btn-danger">Preview</button>
-                                    <input type="submit" value="confirm" class="btn btn-primary">
+                                    <input type="submit" value="confirm" class="btn btn-primary" >
 
                                 </div>
                                 <div class="sc" style="">@include('inc.backtoTop')</div>
