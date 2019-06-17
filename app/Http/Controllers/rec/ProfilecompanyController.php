@@ -105,12 +105,31 @@ class ProfilecompanyController extends Controller
                 $request->session()->put('status','logcompany');
 
                 //return session()->all();
+
+
                 return redirect('/entreprise');
             }else{
-                return 'password false';
+                $success=<<<DELIMITER
+        <div class="alert alert-danger alert-dismissible" style="" role="alert">
+        Mot de passe incorrect
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        </div>
+
+DELIMITER;
+
+                return redirect('/log')->with('message',$success);
             }
         }else{
-            return redirect('/log');
+
+            $success=<<<DELIMITER
+        <div class="alert alert-danger alert-dismissible" role="alert">
+        username Incorecte
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        </div>
+
+DELIMITER;
+
+            return redirect('/log')->with('message',$success);
         }
 
 

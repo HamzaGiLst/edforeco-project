@@ -168,7 +168,6 @@
                 </div>
                 <!-- your content here -->
 
-
                 <footer class="footer">
                     <div class="container-fluid">
                         <nav class="float-left">

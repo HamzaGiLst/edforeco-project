@@ -132,6 +132,12 @@
                 <!-- End Navbar -->
                 <div class="content">
                     <div class="container-fluid">
+                        @if(session()->get('message'))
+                            <?php
+                                echo session()->get('message');
+                            ?>
+                        @endif
+
                         <div class="row">
                             <div class="col-md-11">
                                 <div class="card">

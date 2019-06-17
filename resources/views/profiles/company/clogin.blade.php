@@ -10,6 +10,11 @@
     @endsection
 @section('content')
     <div id="container">
+                           @if(session()->get('message'))
+                            <?php
+                                echo session()->get('message');
+                            ?>
+                        @endif
 
         <form action="/logintoprofile" method="post">
             @csrf

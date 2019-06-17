@@ -31,7 +31,20 @@ class RecrutemetController extends Controller
         $post->describe_poste=request('desc_poste');
         $post->profil_recherche=request('profil_needed');
         $post->save();
-        return redirect()->back();
+
+        $success=<<<DELIMITER
+        <div class="alert alert-success alert-dismissible" role="alert">
+        Votre offre est pret 
+        Merci de choisir Notre plateform
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+        </div>
+
+DELIMITER;
+
+
+        return redirect()->back()->with('message',$success);
     }
     ////show job offres with conditions
     protected function showJobs(Request $request){
