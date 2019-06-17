@@ -10,6 +10,13 @@
         .dark-edition .card .card-header-primary .card-icon, .dark-edition .card .card-header-primary .card-text, .dark-edition .card .card-header-primary:not(.card-header-icon):not(.card-header-text), .dark-edition .card.bg-primary, .dark-edition .card.card-rotate.bg-primary .front, .dark-edition .card.card-rotate.bg-primary .back {
             background: linear-gradient(60deg, #c32522, #6f1616eb)!important;
         }
+        .navbar-brand {
+            float: left;
+            height: 50px!important;
+            padding: 15px 15px!important;
+            font-size: 18px!important;
+            line-height: 20px!important;
+        }
 
     </style>
 @endsection

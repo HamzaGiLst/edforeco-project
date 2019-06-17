@@ -6,6 +6,15 @@
     <!-- Material Kit CSS -->
     <link href="./../assets/css/material-dashboard.css?v=2.1.0" rel="stylesheet" />
 
+    <style>
+        .navbar-brand {
+            float: left;
+            height: 50px!important;
+            padding: 15px 15px!important;
+            font-size: 18px!important;
+            line-height: 20px!important;
+        }
+    </style>
 @endsection
 @section('content')
    <div class="dark-edition">

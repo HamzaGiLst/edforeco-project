@@ -137,17 +137,17 @@ Route::post('/newsletter','newsLetterController@maillist');
 #---------------------------------------------------
 Route::get('/entrepriseUser',function (){
     return view('profiles.company.template.static');
-});
+})->middleware('education');
 Route::get('/entrepriseNosoffre',function (\Illuminate\Http\Request $request){
 
     $post=\App\Annonce::all();
     $company=Enterprise::findOrFail($request->session()->get('companyId')->id);
 
     return view('profiles.company.template.offre',compact('post','company'));
-});
+})->middleware('education');
 Route::get('/entrepriseNewoffre',function (){
     $secteur=[ 'Agroalimentaire', 'Banque/Assurance', 'Bois/Papier/Carton / Imprimerie', 'BTP / Matériaux de construction','Chimie / Parachimie ','Commerce / Négoce / Distribution',  'Édition / Communication / Multimédia',  'Électronique / Électricité' , 'Études et conseils' , 'Industrie pharmaceutique' ,
         'Informatique / Télécoms' , 'Machines et équipements / Automobile',  'Métallurgie / Travail du métal' , 'Plastique / Caoutchouc',  'Services aux entreprises',  'Textile / Habillement / Chaussure'];
 
     return view('profiles.company.template.addoffre',compact('secteur'));
-});
+})->middleware('education');

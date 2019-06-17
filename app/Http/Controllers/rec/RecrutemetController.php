@@ -31,7 +31,7 @@ class RecrutemetController extends Controller
         $post->describe_poste=request('desc_poste');
         $post->profil_recherche=request('profil_needed');
         $post->save();
-        return redirect('/camp');
+        return redirect()->back();
     }
     ////show job offres with conditions
     protected function showJobs(Request $request){

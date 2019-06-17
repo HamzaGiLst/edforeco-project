@@ -10,8 +10,25 @@
         .dark-edition .card .card-header-primary .card-icon, .dark-edition .card .card-header-primary .card-text, .dark-edition .card .card-header-primary:not(.card-header-icon):not(.card-header-text), .dark-edition .card.bg-primary, .dark-edition .card.card-rotate.bg-primary .front, .dark-edition .card.card-rotate.bg-primary .back {
             background: linear-gradient(60deg, #c32522, #6f1616eb)!important;
         }
+        .navbar-brand {
+            float: left;
+            height: 50px!important;
+            padding: 15px 15px!important;
+            font-size: 18px!important;
+            line-height: 20px!important;
+        }
 
     </style>
+
+    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js"></script>
+    <script>tinymce.init({selector:'textarea'});
+
+        new FroalaEditor('div#editor', {
+            // Set dark theme name.
+            theme: 'dark',
+            zIndex: 2003
+        })
+    </script>
 @endsection
 @section('content')
     <div class="dark-edition">
@@ -35,7 +52,7 @@
                                 <p>Dashboard</p>
                             </a>
                         </li>
-                        <li class="nav-item active">
+                        <li class="nav-item ">
                             <a class="nav-link" href="/entreprise#static">
                                 <i class="material-icons">person</i>
                                 <p>User Profile</p>
@@ -50,7 +67,7 @@
                         <li class="nav-item active">
                             <a class="nav-link" href="/entrepriseNewoffre">
                                 <i class="material-icons">note_add</i>
-                                <p>Noouvelle Offres</p>
+                                <p>Nouvelle Offres</p>
                             </a>
                         </li>
                             <!-- your sidebar here -->
@@ -108,11 +125,11 @@
                 <div class="content">
                     <div class="container-fluid">
                         <div class="row">
-                            <div class="col-md-8">
+                            <div class="col-md-11">
                                 <div class="card">
                                     <div class="card-header card-header-primary">
-                                        <h4 class="card-title">Edit Profile</h4>
-                                        <p class="card-category">Complete your profile</p>
+                                        <h4 class="card-title">Nouvelle offre d'emploi </h4>
+                                        <p class="card-category">add new annonce</p>
                                     </div>
                                     <div class="card-body">
                                         <form action="/postannonce" method="post" class="container">
@@ -164,33 +181,14 @@
                                                 <div class="confirm">
                                                     <button class="btn btn-danger">Preview</button>
                                                     <input type="submit" value="confirm" class="btn btn-primary" >
-
-                                                </div>
-                                                <div class="sc" style="">@include('inc.backtoTop')</div>
-                                            </div>
+                                               </div>
                                         </form>
                                     </div>
                                 </div>
                             </div>
                             <!-- logo of company--->
 
-                            <div class="col-md-4">
-                                <div class="card card-profile">
-                                    <div class="card-avatar">
-                                        <a href="#pablo">
-                                            <img class="img" src="../assets/img/faces/marc.jpg" />
-                                        </a>
-                                    </div>
-                                    <div class="card-body">
-                                        <h6 class="card-category">CEO / Co-Founder</h6>
-                                        <h4 class="card-title">Alec Thompson</h4>
-                                        <p class="card-description">
-                                            Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...
-                                        </p>
-                                        <a href="#pablo" class="btn btn-primary btn-round">Follow</a>
-                                    </div>
-                                </div>
-                            </div>
+
                             <!-- your content here -->
 
                         </div>

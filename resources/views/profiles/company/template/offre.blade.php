@@ -10,7 +10,18 @@
         .dark-edition .card .card-header-primary .card-icon, .dark-edition .card .card-header-primary .card-text, .dark-edition .card .card-header-primary:not(.card-header-icon):not(.card-header-text), .dark-edition .card.bg-primary, .dark-edition .card.card-rotate.bg-primary .front, .dark-edition .card.card-rotate.bg-primary .back {
             background: linear-gradient(60deg, #c32522, #6f1616eb)!important;
         }
-
+        .navbar-brand {
+            float: left;
+            height: 50px!important;
+            padding: 15px 15px!important;
+            font-size: 18px!important;
+            line-height: 20px!important;
+        }
+        .navbar .collapse .navbar-nav .nav-item .nav-link .material-icons, .navbar .collapse .navbar-nav .nav-item .nav-link .fa {
+            font-size: 1.25rem!important;
+            max-width: 24px!important;
+            margin-top: -1.1em!important;
+        }
     </style>
 @endsection
 @section('content')
@@ -41,7 +52,7 @@
                                 <p>User Profile</p>
                             </a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item active">
                             <a class="nav-link" href="/entrepriseNosoffre">
                                 <i class="material-icons">content_paste</i>
                                 <p>Nos Offres</p>
@@ -94,7 +105,7 @@
                                         </p>
                                     </a>
                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                                        <a class="dropdown-item" href="/entreprise/logout"><button>log out</button></a>
+                                        <a class="dropdown-item" href="/entreprise/logout"><button class="btn btn-danger">log out</button></a>
                                     </div>
                                 </li>
                                 <!-- your navbar here -->
@@ -160,8 +171,6 @@
                         <!-- your content here -->
 
 
-                    </div>
-                </div>
                 <footer class="footer">
                     <div class="container-fluid">
                         <nav class="float-left">
