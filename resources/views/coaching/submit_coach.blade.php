@@ -9,6 +9,23 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/custom.css">
     <style>
+        .bg-light1 {
+            border-radius: 0px;
+            margin: 0px!important;
+            background-color: #353333!important;
+            font-size: 19px;
+            height: 93px;
+        }
+
+        h5{
+            color: #f60!important;
+            font-size: 2.25rem!important;
+            background: #ff660014;
+            margin-bottom: 5px;
+            height: 3rem!important;
+        }
+
+
         body{
             font-size: 14px;
         }
@@ -102,6 +119,16 @@
             .featurette-heading {
                 margin-top: 7rem;
             }
+        }
+
+        #footer {
+            background: #b0ab93 !important;
+        }
+
+        .nav-link{
+            margin-right: 17px;
+            color: #ff3931;
+            font-family: "Lucida Console", Monaco, monospace;
         }
     </style>
     @endsection

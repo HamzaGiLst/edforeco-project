@@ -103,7 +103,7 @@
                                        </p>
                                    </a>
                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                                       <a class="dropdown-item" href="/entreprise/logout"><button>log out</button></a>
+                                       <a class="dropdown-item" href="/entreprise/logout"><button class="btn btn-danger btn-block"> <span class="glyphicon glyphicon-log-out"></span> log out</button></a>
                                    </div>
                                </li>
 
@@ -535,19 +535,13 @@
                        <nav class="float-left">
                            <ul>
                                <li>
-                                   <a href="https://www.creative-tim.com">
+                                   <a href="">
                                        Edforeco
                                    </a>
                                </li>
                            </ul>
                        </nav>
-                       <div class="copyright float-right">
-                           &copy;
-                           <script>
-                               document.write(new Date().getFullYear())
-                           </script>, made with <i class="material-icons">favorite</i> by
-                           <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a> for a better web.
-                       </div>
+
                        <!-- your footer here -->
                    </div>
                </footer>

@@ -7,16 +7,16 @@
     <style>
 
     </style>
-    @endsection
+@endsection
 @section('content')
     <div id="container">
-                           @if(session()->get('message'))
-                            <?php
-                                echo session()->get('message');
-                            ?>
-                        @endif
+        @if(session()->get('message'))
+            <?php
+            echo session()->get('message');
+            ?>
+        @endif
 
-        <form action="/logintoprofile" method="post">
+        <form action="/admin/login" method="get">
             @csrf
 
             <label for="name">Username:</label>

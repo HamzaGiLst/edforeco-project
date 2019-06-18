@@ -23,6 +23,10 @@
 
         }
 
+        .bmd-label-floating {
+            font-size:13px!important;
+        }
+
     </style>
 @endsection
 @section('content')
@@ -62,7 +66,7 @@
                         <li class="nav-item ">
                             <a class="nav-link" href="/entrepriseNewoffre">
                                 <i class="material-icons">note_add</i>
-                                <p>Noouvelle Offres</p>
+                                <p>Nouvelle Offres</p>
                             </a>
                         </li>
                             <!-- your sidebar here -->
@@ -108,7 +112,7 @@
                                         </p>
                                     </a>
                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                                        <a class="dropdown-item" href="/entreprise/logout"><button>log out</button></a>
+                                        <a class="dropdown-item" href="/entreprise/logout"><button class="btn btn-danger btn-block"> <span class="glyphicon glyphicon-log-out"></span> log out</button></a>
                                     </div>
                                 </li>
                                 <!-- your navbar here -->
@@ -193,15 +197,15 @@
                                             <div class="row">
                                                 <div class="col-md-12">
                                                     <div class="form-group">
-                                                        <label>About Me</label>
+                                                        <label>About Company</label>
                                                         <div class="form-group">
-                                                            <label class="bmd-label-floating"> Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo.</label>
-                                                            <textarea class="form-control" rows="5"></textarea>
+                                                            <label class="bmd-label-floating"></label>
+                                                            <textarea class="form-control" id="editor" rows="5"></textarea>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <button type="submit" class="btn btn-primary pull-right">Update Profile</button>
+                                            <button type="submit" class="btn btn-primary pull-right" style="font-size: 13px;"><span class="glyphicon glyphicon-edit"></span> Update Profile</button>
                                             <div class="clearfix"></div>
                                         </form>
                                     </div>
@@ -213,15 +217,14 @@
                                 <div class="card card-profile">
                                     <div class="card-avatar">
                                         <a href="#pablo">
-                                            <img class="img" src="../assets/img/faces/marc.jpg" />
+
                                         </a>
                                     </div>
                                     <div class="card-body">
-                                        <h6 class="card-category">CEO / Co-Founder</h6>
-                                        <h4 class="card-title">Alec Thompson</h4>
-                                        <p class="card-description">
-                                            Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...
-                                        </p>
+                                        <img class="img" src="/img/logo.png"  style="position: relative;top: 47px;"/>
+                                        <h6 class="card-category">Main contact</h6>
+                                        <h4 class="card-title">Mr Abderrahime ellbouazouli</h4>
+
                                         <a href="#pablo" class="btn btn-primary btn-round">Follow</a>
                                     </div>
                                 </div>
@@ -235,19 +238,13 @@
                         <nav class="float-left">
                             <ul>
                                 <li>
-                                    <a href="https://www.creative-tim.com">
+                                    <a href="">
                                         Edforeco
                                     </a>
                                 </li>
                             </ul>
                         </nav>
-                        <div class="copyright float-right">
-                            &copy;
-                            <script>
-                                document.write(new Date().getFullYear())
-                            </script>, made with <i class="material-icons">favorite</i> by
-                            <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a> for a better web.
-                        </div>
+
                         <!-- your footer here -->
                     </div>
                 </footer>

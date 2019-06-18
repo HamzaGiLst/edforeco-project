@@ -14,7 +14,18 @@
         body{
            font-size: 15px;
         }
-        * Carousel base class */
+
+        .bg-light1 {
+            border-radius: 0px;
+            margin: 0px!important;
+            background-color: #353333!important;
+            font-size: 19px;
+            height: 93px;
+        }
+
+
+
+        /* Carousel base class */
         .carousel {
             margin-bottom: 4rem;
         }
@@ -41,75 +52,181 @@
         }
 
         #footer {
-            background: #343a40 !important;
+            background: #b0ab93 !important;
+        }
+
+        h5{
+            color: #f60!important;
+            font-size: 2.25rem!important;
+            background: #ff660014;
+            margin-bottom: 5px;
+            height: 3rem!important;
+        }
+
+
+
+        /*slider box*/
+
+        .EdforecoSlider{
+            background: #f60;
+            height: 48rem;
+            width: 100%;
+        }
+        .EdforecoSlider img{
+            height: 48rem;
+        }
+
+        .slide1text{
+            position: relative;
+            top: -39rem;
+            width: 36%;
+            left: 183px;
+            height: 28rem;
+            background-color: #12151712;
+            animation: mymove 2s;
+        }
+        @keyframes mymove {
+            from {left: 0px;}
+            to {left: 350px;}
+        }
+
+
+        .btn1 {
+            border: 1px solid black;
+            width: 23rem;
+            height: 38px;
+            font-size: 18px!important;
+            display: inline-block;
+            font-weight: 400;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            border: 1px solid transparent;
+            padding: .375rem .75rem;
+            line-height: 1.5;
+            border-radius: .25rem;
+            transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+        }
+        .btn-outline-primary1 {
+
+
+            color: #007bff;
+            background-color: transparent;
+            background-image: none;
+            border-color: rgba(255, 255, 255, 0.98);
+        }
+        .btn-outline-primary1:hover{
+            color: #FFFFFF;
+            background: #007bff;
+        }
+
+        .bottons{
+            position: relative;
+            left: 90px;
+        }
+
+        .box{
+            position: relative;
+            left: -14px;
+            top: 153px;
+            background-color: #b0ab9336 !important;
+            height:25rem;
+        }
+        .box h3{
+            font-family: ALEGREYA,sans-serif;
+            font-size: 32px;
+            color: #f00
+        }
+
+        .nav-link{
+            margin-right: 17px;
+            color: #ff3931;
+            font-family: "Lucida Console", Monaco, monospace;
         }
     </style>
 @endsection
-@section('content')
-    @include('inc.header')
-    @include('inc.hnav')
-    @include('inc.slider')
-    <div class="card">
-        <div class="card-body justify-content-lg-center">
-            <p>
+@section('navbar')
+    <nav class="navbar navbar-expand-lg navbar-light bg-light1">
+        <a class="navbar-brand" href="#"><img src="https://www.freelogodesign.org/file/app/client/thumb/df10a544-12c1-4fa1-a7c0-f3322715dd93_200x200.png?1560709818159" alt=""style="position: relative;
+    top: -75px;
+    left: 24px;"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-                You should not have to upload images that are more than 72dpi if the dimensions are within the specs above. Also, keep in mind that some digital cameras may save the raw images as .tiff files with CMYK color profiles. When saving the images as .jpg files prior to upload, it is recommended that you select RGB color profile if possible. CMYK may not convert optimally, although it may be adequate for some images.
-            </p>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/site" style="color: #ff3931;">Accueil <span class="sr-only">(current)</span></a>
+                </li>
 
-            <div class="w-full">
-                <header class="post__header">
-                    <h1 class="text-center mb-0">Material Theme for PhpStorm</h1>
-                    <div class="post__footer flex items-start justify-center py-2 px-0">
-                        <div class="post__author text-center">
-                            <img class="inline-block rounded-full w-12 mb-2" src="https://www.gravatar.com/avatar/0e7b6742f9d7e1a8a213d74b429b9e8f?s=130">
-                            <div class="author__content leading-none">
-<span class="label text-xs mb-0 mx-auto inline-block leading-loose">
-<span class="text-grey">November 01, 2016</span>
-<span class="text-grey"> / </span>
-<a class="text-red whitespace-no-wrap hover:text-red-darker transition" href="/@ericlbarnes">Eric L. Barnes</a>
-</span>
-                            </div>
-                        </div>
+                <li class="nav-item dropdown ">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #ff3931;">
+                        Notre Services
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background: rgba(33,153,167,0.16)">
+                        <div class="dropdown-header"></div>
+                        <a class="dropdown-item" href="/formation">Formation et Education</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="/rhome">Recrutement et Emploie</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="/coaching">Coaching</a>
                     </div>
-                </header>
-                <p></p><p>I finally had a chance to install this <a href="https://github.com/ChrisRM/material-theme-jetbrains">Material theme</a> for PhpStorm and it’s really nice. Great colors, neat file type icons–including a Laravel icon for Blade and an elephant for the PHP files.</p>
-                <p>The theme supports all JetBrains products including WebStorm and PyStorm. It also comes in a default style as shown in the screenshot above and a darker style that sets the IDE background to a black. My only minor complaint is it’s hard for me to make out the active file editor tab.</p>
-                <h2>Material Theme Installation</h2>
-                <ol>
-                    <li>Open the Settings/Preferences dialog</li>
-                    <li>Select Plugins.</li>
-                    <li>Click Browse repositories and then search for Material Theme UI</li>
-                    <li>Click Install plugin and confirm your intention to download and install the plugin.</li>
-                    <li>Click OK in the Settings dialog and restart for the changes to take effect.</li>
-                    <li>To switch the IDE theme (not the code color scheme), go to Tools -&gt; Material Theme and choose ‘Darker Theme’, ‘Default Theme’ or ‘Lighter Theme’.</li>
-                </ol><p></p>
-                <p><a class="text-red hover:text-red-darkest transition" href="https://github.com/ChrisRM/material-theme-jetbrains">Visit Resource →</a></p>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="" style="color: #ff3931;">Qui sommes-nous ?
 
-                <hr>
-                <p class="text-sm">
-<span class="mb-0 mx-auto inline-block"><b>Filed in:</b>
-<a class="text-red hover:text-red-darker transition" href="/category/tools">Development Tools</a>
-<span class="text-grey"> / </span>
-<a class="link--black" href="/tag/phpstorm">PhpStorm</a>
-</span>
-                </p>
-                <hr>
-                <div class="hidden md:block py-8" style="border-top: 3px solid #ddd;">
-                    <h3 class="text-xl mb1 text-center">Enjoy this? Get Laravel News delivered straight to your inbox every Sunday.</h3>
-                    <p class="text-center text-sm"><b class="text-grey-darkest">No Spam, ever.</b> We'll never share your email&nbsp;address and you can opt&nbsp;out at any&nbsp;time.</p>
-                    <form action="https://laravelnews.createsend.com/t/d/s/owwr/" method="post" class="newsletter-form" data-area="home">
-                        <input type="hidden" id="fieldhrcf" name="cm-fd-hrcf-mn" value="6">
-                        <input type="hidden" id="fieldhrcfdy" name="cm-fd-hrcf-dy" value="14">
-                        <input type="hidden" id="fieldhrcfyr" name="cm-fd-hrcf-yr" value="2019">
-                        <div class="flex w-full">
-                            <input class="w-full flex-1 input w-full flex-1 border-r-0 rounded-r-none" type="email" placeholder="Email Address" name="cm-owwr-owwr" required="">
-                            <button class="btn border-red p-4 bg-red rounded-r hover:bg-black transition newsletter-subscribe">Subscribe</button>
-                        </div>
-                    </form>
-                </div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="" style="color: #ff3931;">Contact
+
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+
+@endsection
+@section('content')
+
+   <!-- @ include('inc.slider')-->
+
+    <div class="EdforecoSlider" style="">
+        @include('inc.slider')
+    </div>
+
+    <div class="card">
+        <div class="card-header" style="background: #ff660061;">
+            <div class="justify-content-center" style=" position:relative;left:36rem;font-size: 18px;color: #ec4c00;font-family: bold,Helvetica;">
+                CABINET DE RECRUTEMENT ET CONSEIL et Formation RH
             </div>
         </div>
     </div>
 
     @include('inc.foot')
+
+
+
+    <script>
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) {myIndex = 1}
+            x[myIndex-1].style.display = "block";
+            setTimeout(carousel, 10000); // Change image every 2 seconds
+        }
+    </script>
 @endsection

@@ -22,6 +22,11 @@
             font-size: 2.25rem!important;
 
         }
+
+        th,td{
+            font-size:13px!important;
+        }
+
     </style>
 @endsection
 @section('content')
@@ -105,7 +110,7 @@
                                         </p>
                                     </a>
                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                                        <a class="dropdown-item" href="/entreprise/logout"><button class="btn btn-danger">log out</button></a>
+                                        <a class="dropdown-item" href="/entreprise/logout"><button class="btn btn-danger btn-block"> <span class="glyphicon glyphicon-log-out"></span> log out</button></a>
                                     </div>
                                 </li>
                                 <!-- your navbar here -->
@@ -120,7 +125,7 @@
                             <div class="col-md-12">
                                 <div class="card">
                                     <div class="card-header card-header-primary">
-                                        <h4 class="card-title ">Simple Table</h4>
+                                        <h3 class="card-title ">Simple Table</h3>
                                         <p class="card-category"> Here is a subtitle for this table</p>
                                     </div>
                                     <div class="card-body">
@@ -156,7 +161,7 @@
                                                         <td style="width: auto"><?php echo $p['describe_entreprise'] ?></td>
                                                         <td><?php echo $p['describe_poste'] ?></td>
                                                         <td><?php echo $p['profil_recherche'] ?></td>
-                                                        <td><a href="/delete/{{$p['annonceid']}}"><button class="btn btn-danger">Supprimer</button></a></td>
+                                                        <td><a href="/delete/{{$p['annonceid']}}"><button class="btn btn-danger" style="font-size: 12px;"><span class="glyphicon glyphicon-trash"></span> Supprimer</button></a></td>
                                                     </tr>
                                                 @endforeach
                                                 </tbody>
@@ -182,13 +187,7 @@
                                 </li>
                             </ul>
                         </nav>
-                        <div class="copyright float-right">
-                            &copy;
-                            <script>
-                                document.write(new Date().getFullYear())
-                            </script>, made with <i class="material-icons">favorite</i> by
-                            <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a> for a better web.
-                        </div>
+
                         <!-- your footer here -->
                     </div>
                 </footer>

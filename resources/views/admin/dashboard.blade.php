@@ -1,6 +1,7 @@
 @extends('layouts.proapp')
 @section('title','Admin Panel')
 @section('header')
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
     <!-- Material Kit CSS -->
@@ -34,6 +35,98 @@
             background: #6c757dad;
         }
     </style>
+    <script>
+        window.onload = function () {
+
+            var chart = new CanvasJS.Chart("chartContainer", {
+                animationEnabled: true,
+                theme: "light2",
+                title:{
+                    text: "Site Traffic"
+                },
+                axisX:{
+                    valueFormatString: "DD MMM",
+                    crosshair: {
+                        enabled: true,
+                        snapToDataPoint: true
+                    }
+                },
+                axisY: {
+                    title: "Number of Visits",
+                    crosshair: {
+                        enabled: true
+                    }
+                },
+                toolTip:{
+                    shared:true
+                },
+                legend:{
+                    cursor:"pointer",
+                    verticalAlign: "bottom",
+                    horizontalAlign: "left",
+                    dockInsidePlotArea: true,
+                    itemclick: toogleDataSeries
+                },
+                data: [{
+                    type: "line",
+                    showInLegend: true,
+                    name: "Total Visit",
+                    markerType: "square",
+                    xValueFormatString: "DD MMM, YYYY",
+                    color: "#F08080",
+                    dataPoints: [
+                        { x: new Date(2019, 0, 3), y: 650 },
+                        { x: new Date(2019, 0, 4), y: 700 },
+                        { x: new Date(2019, 0, 5), y: 710 },
+                        { x: new Date(2019, 0, 6), y: 658 },
+                        { x: new Date(2019, 0, 7), y: 734 },
+                        { x: new Date(2019, 0, 8), y: 963 },
+                        { x: new Date(2019, 0, 9), y: 847 },
+                        { x: new Date(2019, 0, 10), y: 853 },
+                        { x: new Date(2019, 0, 11), y: 869 },
+                        { x: new Date(2019, 0, 12), y: 943 },
+                        { x: new Date(2019, 0, 13), y: 970 },
+                        { x: new Date(2019, 0, 14), y: 869 },
+                        { x: new Date(2019, 0, 15), y: 890 },
+                        { x: new Date(2019, 0, 16), y: 930 }
+                    ]
+                },
+                    {
+                        type: "line",
+                        showInLegend: true,
+                        name: "Unique Visit",
+                        lineDashType: "dash",
+                        dataPoints: [
+                            { x: new Date(2019, 0, 3), y: 510 },
+                            { x: new Date(2019, 0, 4), y: 560 },
+                            { x: new Date(2019, 0, 5), y: 540 },
+                            { x: new Date(2019, 0, 6), y: 558 },
+                            { x: new Date(2019, 0, 7), y: 544 },
+                            { x: new Date(2019, 0, 8), y: 693 },
+                            { x: new Date(2019, 0, 9), y: 657 },
+                            { x: new Date(2019, 0, 10), y: 663 },
+                            { x: new Date(2019, 0, 11), y: 639 },
+                            { x: new Date(2019, 0, 12), y: 673 },
+                            { x: new Date(2019, 0, 13), y: 660 },
+                            { x: new Date(2019, 0, 14), y: 562 },
+                            { x: new Date(2019, 0, 15), y: 643 },
+                            { x: new Date(2019, 0, 16), y: 570 }
+                        ]
+                    }]
+            });
+            chart.render();
+
+            function toogleDataSeries(e){
+                if (typeof(e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+                    e.dataSeries.visible = false;
+                } else{
+                    e.dataSeries.visible = true;
+                }
+                chart.render();
+            }
+
+        }
+    </script>
 @endsection
 @section('content')
     <div class="dark-edition">
@@ -130,11 +223,78 @@
                 <!-- End Navbar -->
                 <div class="content">
                     <div class="container-fluid">
-
-
-
-
+                        <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+                        <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
                         <!-- your content here -->
+                        <div class="row">
+                            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
+                                <div class="card card-stats">
+                                    <div class="card-header card-header-warning card-header-icon">
+                                        <div class="card-icon">
+                                            <i class="material-icons">content_copy</i>
+                                        </div>
+                                        <p class="card-category">Used Space</p>
+                                        <h3 class="card-title">49/50
+                                            <small>GB</small>
+                                        </h3>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="stats">
+                                            <i class="material-icons text-warning">warning</i>
+                                            <a href="#pablo" class="warning-link">Get More Space...</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
+                                <div class="card card-stats">
+                                    <div class="card-header card-header-success card-header-icon">
+                                        <div class="card-icon">
+                                            <i class="material-icons">store</i>
+                                        </div>
+                                        <p class="card-category">Revenue</p>
+                                        <h3 class="card-title">$34,245</h3>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="stats">
+                                            <i class="material-icons">date_range</i> Last 24 Hours
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
+                                <div class="card card-stats">
+                                    <div class="card-header card-header-danger card-header-icon">
+                                        <div class="card-icon">
+                                            <i class="material-icons">info_outline</i>
+                                        </div>
+                                        <p class="card-category">Fixed Issues</p>
+                                        <h3 class="card-title">75</h3>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="stats">
+                                            <i class="material-icons">local_offer</i> Tracked from Github
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
+                                <div class="card card-stats">
+                                    <div class="card-header card-header-info card-header-icon">
+                                        <div class="card-icon">
+                                            <i class="fa fa-twitter"></i>
+                                        </div>
+                                        <p class="card-category">Followers</p>
+                                        <h3 class="card-title">+245</h3>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="stats">
+                                            <i class="material-icons">update</i> Just Updated
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <footer class="footer">
@@ -142,19 +302,13 @@
                         <nav class="float-left">
                             <ul>
                                 <li>
-                                    <a href="https://www.creative-tim.com">
+                                    <a href="">
                                         Edforeco
                                     </a>
                                 </li>
                             </ul>
                         </nav>
-                        <div class="copyright float-right">
-                            &copy;
-                            <script>
-                                document.write(new Date().getFullYear())
-                            </script>, made with <i class="material-icons">favorite</i> by
-                            <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a> for a better web.
-                        </div>
+
                         <!-- your footer here -->
                     </div>
                 </footer>
@@ -180,6 +334,7 @@
     <!-- Material Dashboard DEMO methods, don't include it in your project! -->
     <script src="./assets/demo/demo.js"></script>
     <script>
+
         $(document).ready(function() {
             $().ready(function() {
                 $sidebar = $('.sidebar');

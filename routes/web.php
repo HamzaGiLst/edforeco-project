@@ -24,7 +24,7 @@ Route::get('/cond', function () {
 //Route::get('/condidat/register','rec\ProfilesController@index');
 //Route::post('/condidat/create','rec\ProfilesController@store');
 Route::resource('condidats','rec\ProfilesController');
-Route::get('condidat/login','rec\ProfilesController@login_index');
+Route::get('condidatlogin','rec\ProfilesController@login_index');
 
 Route::resource('company','rec\ProfilecompanyController');
 
@@ -104,6 +104,11 @@ Route::get('/sendDemandeJob','rec\RecrutemetController@sendDemendEmploi');
 Route::get('/admin','AdminController@adminPanel');
 Route::get('/adminFormation','AdminController@adminPanelFormation');
 Route::get('/adminCoaching','AdminController@adminPanelCoaching');
+Route::get('/adminlogin','AdminController@adminPanelLogin');
+Route::get('/admin/login','AdminController@adminLogin');
+
+Route::get('/delete2/{id}','AdminController@deleteCoach');
+Route::get('/delete1/{id}','AdminController@deleteFormation');
 
 
 

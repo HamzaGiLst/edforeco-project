@@ -88,7 +88,7 @@
                 <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
                     <div class="container-fluid">
                         <div class="navbar-wrapper">
-                            <a class="navbar-brand" href="javascript:void(0)">Nos Offres</a>
+                            <a class="navbar-brand" href="javascript:void(0)">Coaching</a>
                         </div>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="sr-only">Toggle navigation</span>
@@ -137,8 +137,8 @@
                             <div class="col-md-12">
                                 <div class="card">
                                     <div class="card-header card-header-primary">
-                                        <h4 class="card-title ">Demande de Formation</h4>
-                                        <p class="card-category"> la Liste des demande de formation</p>
+                                        <h4 class="card-title ">Demande de Coaching</h4>
+                                        <p class="card-category"> la Liste des demande de consultation</p>
                                     </div>
                                     <div class="card-body">
                                         <div class="table-responsive">
@@ -146,17 +146,23 @@
                                                 <thead class=" text-primary">
                                                 <tr>
                                                     <th>Entreprise</th>
+                                                    <th>Email</th>
                                                     <th>Telephone</th>
-                                                    <th>Formation</th>
                                                     <th>Besoin</th>
-                                                    <th>Details</th>
-
+                                                    <th>Actions</th>
                                                 </tr>
                                                 </thead>
                                                 <tbody>
-                                                @foreach($coach as $e)
-
-                                                @endforeach
+                                                    @foreach($coach as $e)
+                                                        <tr>
+                                                            <td>{{$e['name']}}</td>
+                                                            <td>{{$e['email']}}</td>
+                                                            <td>{{$e['phone']}}</td>
+                                                            <td>{{$e['besoin']}}</td>
+                                                            <td><a href="/delete2/{{$e['id']}}"><button class="btn btn-danger" style="font-size: 9px;"><span class="glyphicon glyphicon-trash"></span> Supprimer</button></a>
+                                                            <a href="/delete/"><button class="btn btn-success" style="font-size: 9px;"><span class="glyphicon "></span> Valider</button></a></td>
+                                                        </tr>
+                                                    @endforeach
                                                 </tbody>
                                             </table>
                                         </div>
@@ -173,19 +179,13 @@
                         <nav class="float-left">
                             <ul>
                                 <li>
-                                    <a href="https://www.creative-tim.com">
+                                    <a href="">
                                         Edforeco
                                     </a>
                                 </li>
                             </ul>
                         </nav>
-                        <div class="copyright float-right">
-                            &copy;
-                            <script>
-                                document.write(new Date().getFullYear())
-                            </script>, made with <i class="material-icons">favorite</i> by
-                            <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a> for a better web.
-                        </div>
+
                         <!-- your footer here -->
                     </div>
                 </footer>

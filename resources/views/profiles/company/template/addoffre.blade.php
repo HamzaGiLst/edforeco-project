@@ -33,6 +33,17 @@
             margin-left: 32rem;
         }
 
+        #sl{
+            font-size:14px;
+        }
+        #sl input{
+            font-size:13px;
+            margin-top:2rem;
+            margin-bottom:1rem;
+        }
+
+
+
     </style>
     @include('inc.froalaeditor')
 
@@ -121,7 +132,7 @@
                                         </p>
                                     </a>
                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                                        <a class="dropdown-item" href="/entreprise/logout"><button>log out</button></a>
+                                        <a class="dropdown-item" href="/entreprise/logout"><button class="btn btn-danger btn-block"> <span class="glyphicon glyphicon-log-out"></span> log out</button></a>
                                     </div>
                                 </li>
                                 <!-- your navbar here -->
@@ -142,7 +153,7 @@
                             <div class="col-md-11">
                                 <div class="card">
                                     <div class="card-header card-header-primary">
-                                        <h4 class="card-title">Nouvelle offre d'emploi </h4>
+                                        <h3 class="card-title">Nouvelle offre d'emploi </h3>
                                         <p class="card-category">add new annonce</p>
                                     </div>
                                     <div class="card-body">
@@ -194,7 +205,8 @@
                                                 </div>
                                                 <div class="confirm">
                                                     <button class="btn btn-danger" style="font-size: 13px">Preview</button>
-                                                    <input type="submit" value="confirm" class="btn btn-primary" style="font-size: 13px">
+
+                                                    <input type="submit" value="confirm" class="btn btn-primary " style="font-size: 13px">
                                                </div>
                                         </form>
                                     </div>
@@ -212,19 +224,13 @@
                             <nav class="float-left">
                                 <ul>
                                     <li>
-                                        <a href="https://www.creative-tim.com">
+                                        <a href="">
                                             Edforeco
                                         </a>
                                     </li>
                                 </ul>
                             </nav>
-                            <div class="copyright float-right">
-                                &copy;
-                                <script>
-                                    document.write(new Date().getFullYear())
-                                </script>, made with <i class="material-icons">favorite</i> by
-                                <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a> for a better web.
-                            </div>
+
                             <!-- your footer here -->
                         </div>
                     </footer>
