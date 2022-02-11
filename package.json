@@ -24,6 +24,6 @@
         "vue-template-compiler": "^2.6.10"
     },
     "dependencies": {
-        "froala-editor": "^3.0.0-beta.1"
+        "froala-editor": "^4.0.7"
     }
 }
